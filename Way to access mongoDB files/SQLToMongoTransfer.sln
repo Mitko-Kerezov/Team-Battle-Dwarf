@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLToMongoTransfer", "SQLToMongoTransfer\SQLToMongoTransfer.csproj", "{34C8DD08-BCBB-402B-A529-BB80A98C0E7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateExcelFiles", "CreateExcelFiles\CreateExcelFiles.csproj", "{F3D23747-5B75-4A0C-868A-9E41CB1D0766}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{34C8DD08-BCBB-402B-A529-BB80A98C0E7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34C8DD08-BCBB-402B-A529-BB80A98C0E7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34C8DD08-BCBB-402B-A529-BB80A98C0E7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3D23747-5B75-4A0C-868A-9E41CB1D0766}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3D23747-5B75-4A0C-868A-9E41CB1D0766}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3D23747-5B75-4A0C-868A-9E41CB1D0766}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3D23747-5B75-4A0C-868A-9E41CB1D0766}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

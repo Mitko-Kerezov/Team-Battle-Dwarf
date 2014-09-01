@@ -58,61 +58,61 @@ namespace SQLToMongoTransfer
             //    Console.WriteLine(p.Id);
             //}
 
-            var mongoDBCreateCollectionResult = mongoDatabase.CreateCollection("Events");
-            var events = mongoDatabase.GetCollection<Event>("Events");
+            //var mongoDBCreateCollectionResult = mongoDatabase.CreateCollection("Events");
+            //var events = mongoDatabase.GetCollection<Event>("Events");
 
-            Event tmpEvent = new Event();
-            var sqlEvent =
-                from evt in sqlEntities.Competitions
-                select evt;
-            int count = 0;
-            foreach (var evt in sqlEvent)
-            {
-                count++;
-                tmpEvent.Id = null;
-                tmpEvent.CompetitionID = evt.CompetitionID;
-                tmpEvent.Discipline = evt.Discipline;
-                tmpEvent.Evt = evt.Event;
-                tmpEvent.Sport = evt.Sport;
-                events.Insert(tmpEvent);
-                Console.Write("\rProcesing {0} records", count);
-            }
-            Console.Write("\rPress Enter");
-            Console.ReadLine();
-            var resultEvents =
-                from e in events.AsQueryable<Event>()
-                select e;
-            foreach (var e in resultEvents)
-            {
-                Console.WriteLine(e.Id);
-            }
+            //Event tmpEvent = new Event();
+            //var sqlEvent =
+            //    from evt in sqlEntities.Competitions
+            //    select evt;
+            //int count = 0;
+            //foreach (var evt in sqlEvent)
+            //{
+            //    count++;
+            //    tmpEvent.Id = null;
+            //    tmpEvent.CompetitionID = evt.CompetitionID;
+            //    tmpEvent.Discipline = evt.Discipline;
+            //    tmpEvent.Evt = evt.Event;
+            //    tmpEvent.Sport = evt.Sport;
+            //    events.Insert(tmpEvent);
+            //    Console.Write("\rProcesing {0} records", count);
+            //}
+            //Console.Write("\rPress Enter");
+            //Console.ReadLine();
+            //var resultEvents =
+            //    from e in events.AsQueryable<Event>()
+            //    select e;
+            //foreach (var e in resultEvents)
+            //{
+            //    Console.WriteLine(e.Id);
+            //}
 
-            var mongoDBCreateCitiesResult = mongoDatabase.CreateCollection("Cities");
-            var cities = mongoDatabase.GetCollection<City>("Cities");
-            Cities tmpCity = new Cities();
-            var sqlCity =
-                from city in sqlEntities.Cities
-                select city;
-            count = 0;
-            foreach (var city in sqlCity)
-            {
-                count++;
-                tmpCity.Id = null;
-                tmpCity.CityID= city.CityID;
-                tmpCity.Name = city.City1;
-                tmpCity.Edition= city.Edition;
-                cities.Insert(tmpCity);
-                Console.Write("\rProcesing {0} records", count);
-            }
-            Console.Write("\rPress Enter");
-            Console.ReadLine();
-            var resultCities =
-                from c in cities.AsQueryable<City>()
-                select c;
-            foreach (var e in resultCities)
-            {
-                Console.WriteLine(e.CityID);
-            }
+            //var mongoDBCreateCitiesResult = mongoDatabase.CreateCollection("Cities");
+            //var cities = mongoDatabase.GetCollection<City>("Cities");
+            //Cities tmpCity = new Cities();
+            //var sqlCity =
+            //    from city in sqlEntities.Cities
+            //    select city;
+            //count = 0;
+            //foreach (var city in sqlCity)
+            //{
+            //    count++;
+            //    tmpCity.Id = null;
+            //    tmpCity.CityID= city.CityID;
+            //    tmpCity.Name = city.City1;
+            //    tmpCity.Edition= city.Edition;
+            //    cities.Insert(tmpCity);
+            //    Console.Write("\rProcesing {0} records", count);
+            //}
+            //Console.Write("\rPress Enter");
+            //Console.ReadLine();
+            //var resultCities =
+            //    from c in cities.AsQueryable<City>()
+            //    select c;
+            //foreach (var e in resultCities)
+            //{
+            //    Console.WriteLine(e.CityID);
+            //}
 
         }
     }
