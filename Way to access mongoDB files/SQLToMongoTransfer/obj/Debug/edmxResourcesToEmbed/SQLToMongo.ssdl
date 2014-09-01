@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SummerOlympicsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'SummerOlympics.dbo.ALL MEDALISTS' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="ALL MEDALISTS">
+          <Property Name="City" Type="nvarchar" MaxLength="255" />
+          <Property Name="Edition" Type="float" />
+          <Property Name="Sport" Type="nvarchar" MaxLength="255" />
+          <Property Name="Discipline" Type="nvarchar" MaxLength="255" />
+          <Property Name="Athlete" Type="nvarchar" MaxLength="255" />
+          <Property Name="NOC" Type="nvarchar" MaxLength="255" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="255" />
+          <Property Name="Event" Type="nvarchar" MaxLength="255" />
+          <Property Name="Event_gender" Type="nvarchar" MaxLength="255" />
+          <Property Name="Medal" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <EntityType Name="Athletes">
+    <Key>
+      <PropertyRef Name="AthletID" />
+    </Key>
+    <Property Name="AthletID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Country" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Gender" Type="nchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cities">
+    <Key>
+      <PropertyRef Name="CityID" />
+    </Key>
+    <Property Name="CityID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Edition" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Competitions">
+    <Key>
+      <PropertyRef Name="CompetitionID" />
+    </Key>
+    <Property Name="CompetitionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sport" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Discipline" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Event" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SummerOlympicsModelStoreContainer">
+    <EntitySet Name="Athletes" EntityType="Self.Athletes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cities" EntityType="Self.Cities" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Competitions" EntityType="Self.Competitions" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
