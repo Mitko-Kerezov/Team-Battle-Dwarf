@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6d818eafa4bb47a6a31e40a04cfc1be2" Name="Diagram1">
+        <EntityTypeShape EntityType="Olympiads.Model.Athlete" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="Olympiads.Model.City" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Olympiads.Model.Discipline" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Olympiads.Model.Event" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Olympiads.Model.Nationality" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Olympiads.Model.Ranking" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Olympiads.Model.Sport" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Olympiads.Model.SummerOlympiad" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <AssociationConnector Association="Olympiads.Model.FK_Athletes_Nationalities" ManuallyRouted="false" />
+        <AssociationConnector Association="Olympiads.Model.FK_Rankings_Athletes" ManuallyRouted="false" />
+        <AssociationConnector Association="Olympiads.Model.FK_SummerOlympiads_Cities" ManuallyRouted="false" />
+        <AssociationConnector Association="Olympiads.Model.FK_Disciplines_Sports" ManuallyRouted="false" />
+        <AssociationConnector Association="Olympiads.Model.FK_Events_Disciplines" ManuallyRouted="false" />
+        <AssociationConnector Association="Olympiads.Model.FK_Events_SummerOlympiads" ManuallyRouted="false" />
+        <AssociationConnector Association="Olympiads.Model.FK_Rankings_Events" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Olympiads.Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Athletes">
+          <Key>
+            <PropertyRef Name="AthleteId" />
+          </Key>
+          <Property Name="AthleteId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FullName" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="Gender" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="NationalityId" Type="int" />
+        </EntityType>
+        <EntityType Name="Cities">
+          <Key>
+            <PropertyRef Name="CityId" />
+          </Key>
+          <Property Name="CityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Disciplines">
+          <Key>
+            <PropertyRef Name="DisciplineId" />
+          </Key>
+          <Property Name="DisciplineId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SportId" Type="int" />
+        </EntityType>
+        <EntityType Name="Events">
+          <Key>
+            <PropertyRef Name="EventId" />
+          </Key>
+          <Property Name="EventId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DisciplineId" Type="int" Nullable="false" />
+          <Property Name="SummerOlympiadId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Nationalities">
+          <Key>
+            <PropertyRef Name="NationalityId" />
+          </Key>
+          <Property Name="NationalityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Rankings">
+          <Key>
+            <PropertyRef Name="RankId" />
+          </Key>
+          <Property Name="RankId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AthleteId" Type="int" Nullable="false" />
+          <Property Name="EventId" Type="int" Nullable="false" />
+          <Property Name="Rank" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sports">
+          <Key>
+            <PropertyRef Name="SportId" />
+          </Key>
+          <Property Name="SportId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SummerOlympiads">
+          <Key>
+            <PropertyRef Name="SummerOlympiadId" />
+          </Key>
+          <Property Name="SummerOlympiadId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Year" Type="int" Nullable="false" />
+          <Property Name="CityId" Type="int" />
+        </EntityType>
+        <Association Name="FK_Athletes_Nationalities">
+          <End Role="Nationalities" Type="Self.Nationalities" Multiplicity="0..1" />
+          <End Role="Athletes" Type="Self.Athletes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nationalities">
+              <PropertyRef Name="NationalityId" />
+            </Principal>
+            <Dependent Role="Athletes">
+              <PropertyRef Name="NationalityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Disciplines_Sports">
+          <End Role="Sports" Type="Self.Sports" Multiplicity="0..1" />
+          <End Role="Disciplines" Type="Self.Disciplines" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sports">
+              <PropertyRef Name="SportId" />
+            </Principal>
+            <Dependent Role="Disciplines">
+              <PropertyRef Name="SportId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Events_Disciplines">
+          <End Role="Disciplines" Type="Self.Disciplines" Multiplicity="1" />
+          <End Role="Events" Type="Self.Events" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Disciplines">
+              <PropertyRef Name="DisciplineId" />
+            </Principal>
+            <Dependent Role="Events">
+              <PropertyRef Name="DisciplineId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Events_SummerOlympiads">
+          <End Role="SummerOlympiads" Type="Self.SummerOlympiads" Multiplicity="1" />
+          <End Role="Events" Type="Self.Events" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SummerOlympiads">
+              <PropertyRef Name="SummerOlympiadId" />
+            </Principal>
+            <Dependent Role="Events">
+              <PropertyRef Name="SummerOlympiadId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rankings_Athletes">
+          <End Role="Athletes" Type="Self.Athletes" Multiplicity="1" />
+          <End Role="Rankings" Type="Self.Rankings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Athletes">
+              <PropertyRef Name="AthleteId" />
+            </Principal>
+            <Dependent Role="Rankings">
+              <PropertyRef Name="AthleteId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rankings_Events">
+          <End Role="Events" Type="Self.Events" Multiplicity="1" />
+          <End Role="Rankings" Type="Self.Rankings" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Events">
+              <PropertyRef Name="EventId" />
+            </Principal>
+            <Dependent Role="Rankings">
+              <PropertyRef Name="EventId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SummerOlympiads_Cities">
+          <End Role="Cities" Type="Self.Cities" Multiplicity="0..1" />
+          <End Role="SummerOlympiads" Type="Self.SummerOlympiads" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cities">
+              <PropertyRef Name="CityId" />
+            </Principal>
+            <Dependent Role="SummerOlympiads">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="OlympiadsModelStoreContainer">
+          <EntitySet Name="Athletes" EntityType="Self.Athletes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cities" EntityType="Self.Cities" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Disciplines" EntityType="Self.Disciplines" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Events" EntityType="Self.Events" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Nationalities" EntityType="Self.Nationalities" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Rankings" EntityType="Self.Rankings" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sports" EntityType="Self.Sports" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SummerOlympiads" EntityType="Self.SummerOlympiads" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Athletes_Nationalities" Association="Self.FK_Athletes_Nationalities">
+            <End Role="Nationalities" EntitySet="Nationalities" />
+            <End Role="Athletes" EntitySet="Athletes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Disciplines_Sports" Association="Self.FK_Disciplines_Sports">
+            <End Role="Sports" EntitySet="Sports" />
+            <End Role="Disciplines" EntitySet="Disciplines" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Events_Disciplines" Association="Self.FK_Events_Disciplines">
+            <End Role="Disciplines" EntitySet="Disciplines" />
+            <End Role="Events" EntitySet="Events" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Events_SummerOlympiads" Association="Self.FK_Events_SummerOlympiads">
+            <End Role="SummerOlympiads" EntitySet="SummerOlympiads" />
+            <End Role="Events" EntitySet="Events" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rankings_Athletes" Association="Self.FK_Rankings_Athletes">
+            <End Role="Athletes" EntitySet="Athletes" />
+            <End Role="Rankings" EntitySet="Rankings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rankings_Events" Association="Self.FK_Rankings_Events">
+            <End Role="Events" EntitySet="Events" />
+            <End Role="Rankings" EntitySet="Rankings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SummerOlympiads_Cities" Association="Self.FK_SummerOlympiads_Cities">
+            <End Role="Cities" EntitySet="Cities" />
+            <End Role="SummerOlympiads" EntitySet="SummerOlympiads" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Olympiads.Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Athlete">
+          <Key>
+            <PropertyRef Name="AthleteId" />
+          </Key>
+          <Property Name="AthleteId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FullName" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Gender" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="NationalityId" Type="Int32" />
+          <NavigationProperty Name="Nationality" Relationship="Self.FK_Athletes_Nationalities" FromRole="Athletes" ToRole="Nationalities" />
+          <NavigationProperty Name="Rankings" Relationship="Self.FK_Rankings_Athletes" FromRole="Athletes" ToRole="Rankings" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="CityId" />
+          </Key>
+          <Property Name="CityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="SummerOlympiads" Relationship="Self.FK_SummerOlympiads_Cities" FromRole="Cities" ToRole="SummerOlympiads" />
+        </EntityType>
+        <EntityType Name="Discipline">
+          <Key>
+            <PropertyRef Name="DisciplineId" />
+          </Key>
+          <Property Name="DisciplineId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SportId" Type="Int32" />
+          <NavigationProperty Name="Sport" Relationship="Self.FK_Disciplines_Sports" FromRole="Disciplines" ToRole="Sports" />
+          <NavigationProperty Name="Events" Relationship="Self.FK_Events_Disciplines" FromRole="Disciplines" ToRole="Events" />
+        </EntityType>
+        <EntityType Name="Event">
+          <Key>
+            <PropertyRef Name="EventId" />
+          </Key>
+          <Property Name="EventId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DisciplineId" Type="Int32" Nullable="false" />
+          <Property Name="SummerOlympiadId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Discipline" Relationship="Self.FK_Events_Disciplines" FromRole="Events" ToRole="Disciplines" />
+          <NavigationProperty Name="SummerOlympiad" Relationship="Self.FK_Events_SummerOlympiads" FromRole="Events" ToRole="SummerOlympiads" />
+          <NavigationProperty Name="Rankings" Relationship="Self.FK_Rankings_Events" FromRole="Events" ToRole="Rankings" />
+        </EntityType>
+        <EntityType Name="Nationality">
+          <Key>
+            <PropertyRef Name="NationalityId" />
+          </Key>
+          <Property Name="NationalityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Athletes" Relationship="Self.FK_Athletes_Nationalities" FromRole="Nationalities" ToRole="Athletes" />
+        </EntityType>
+        <EntityType Name="Ranking">
+          <Key>
+            <PropertyRef Name="RankId" />
+          </Key>
+          <Property Name="RankId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AthleteId" Type="Int32" Nullable="false" />
+          <Property Name="EventId" Type="Int32" Nullable="false" />
+          <Property Name="Rank" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Athlete" Relationship="Self.FK_Rankings_Athletes" FromRole="Rankings" ToRole="Athletes" />
+          <NavigationProperty Name="Event" Relationship="Self.FK_Rankings_Events" FromRole="Rankings" ToRole="Events" />
+        </EntityType>
+        <EntityType Name="Sport">
+          <Key>
+            <PropertyRef Name="SportId" />
+          </Key>
+          <Property Name="SportId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Disciplines" Relationship="Self.FK_Disciplines_Sports" FromRole="Sports" ToRole="Disciplines" />
+        </EntityType>
+        <EntityType Name="SummerOlympiad">
+          <Key>
+            <PropertyRef Name="SummerOlympiadId" />
+          </Key>
+          <Property Name="SummerOlympiadId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Year" Type="Int32" Nullable="false" />
+          <Property Name="CityId" Type="Int32" />
+          <NavigationProperty Name="City" Relationship="Self.FK_SummerOlympiads_Cities" FromRole="SummerOlympiads" ToRole="Cities" />
+          <NavigationProperty Name="Events" Relationship="Self.FK_Events_SummerOlympiads" FromRole="SummerOlympiads" ToRole="Events" />
+        </EntityType>
+        <Association Name="FK_Athletes_Nationalities">
+          <End Role="Nationalities" Type="Self.Nationality" Multiplicity="0..1" />
+          <End Role="Athletes" Type="Self.Athlete" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nationalities">
+              <PropertyRef Name="NationalityId" />
+            </Principal>
+            <Dependent Role="Athletes">
+              <PropertyRef Name="NationalityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rankings_Athletes">
+          <End Role="Athletes" Type="Self.Athlete" Multiplicity="1" />
+          <End Role="Rankings" Type="Self.Ranking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Athletes">
+              <PropertyRef Name="AthleteId" />
+            </Principal>
+            <Dependent Role="Rankings">
+              <PropertyRef Name="AthleteId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SummerOlympiads_Cities">
+          <End Role="Cities" Type="Self.City" Multiplicity="0..1" />
+          <End Role="SummerOlympiads" Type="Self.SummerOlympiad" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cities">
+              <PropertyRef Name="CityId" />
+            </Principal>
+            <Dependent Role="SummerOlympiads">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Disciplines_Sports">
+          <End Role="Sports" Type="Self.Sport" Multiplicity="0..1" />
+          <End Role="Disciplines" Type="Self.Discipline" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sports">
+              <PropertyRef Name="SportId" />
+            </Principal>
+            <Dependent Role="Disciplines">
+              <PropertyRef Name="SportId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Events_Disciplines">
+          <End Role="Disciplines" Type="Self.Discipline" Multiplicity="1" />
+          <End Role="Events" Type="Self.Event" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Disciplines">
+              <PropertyRef Name="DisciplineId" />
+            </Principal>
+            <Dependent Role="Events">
+              <PropertyRef Name="DisciplineId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Events_SummerOlympiads">
+          <End Role="SummerOlympiads" Type="Self.SummerOlympiad" Multiplicity="1" />
+          <End Role="Events" Type="Self.Event" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SummerOlympiads">
+              <PropertyRef Name="SummerOlympiadId" />
+            </Principal>
+            <Dependent Role="Events">
+              <PropertyRef Name="SummerOlympiadId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rankings_Events">
+          <End Role="Events" Type="Self.Event" Multiplicity="1" />
+          <End Role="Rankings" Type="Self.Ranking" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Events">
+              <PropertyRef Name="EventId" />
+            </Principal>
+            <Dependent Role="Rankings">
+              <PropertyRef Name="EventId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="OlympiadsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Athletes" EntityType="Self.Athlete" />
+          <EntitySet Name="Cities" EntityType="Self.City" />
+          <EntitySet Name="Disciplines" EntityType="Self.Discipline" />
+          <EntitySet Name="Events" EntityType="Self.Event" />
+          <EntitySet Name="Nationalities" EntityType="Self.Nationality" />
+          <EntitySet Name="Rankings" EntityType="Self.Ranking" />
+          <EntitySet Name="Sports" EntityType="Self.Sport" />
+          <EntitySet Name="SummerOlympiads" EntityType="Self.SummerOlympiad" />
+          <AssociationSet Name="FK_Athletes_Nationalities" Association="Self.FK_Athletes_Nationalities">
+            <End Role="Nationalities" EntitySet="Nationalities" />
+            <End Role="Athletes" EntitySet="Athletes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rankings_Athletes" Association="Self.FK_Rankings_Athletes">
+            <End Role="Athletes" EntitySet="Athletes" />
+            <End Role="Rankings" EntitySet="Rankings" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SummerOlympiads_Cities" Association="Self.FK_SummerOlympiads_Cities">
+            <End Role="Cities" EntitySet="Cities" />
+            <End Role="SummerOlympiads" EntitySet="SummerOlympiads" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Disciplines_Sports" Association="Self.FK_Disciplines_Sports">
+            <End Role="Sports" EntitySet="Sports" />
+            <End Role="Disciplines" EntitySet="Disciplines" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Events_Disciplines" Association="Self.FK_Events_Disciplines">
+            <End Role="Disciplines" EntitySet="Disciplines" />
+            <End Role="Events" EntitySet="Events" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Events_SummerOlympiads" Association="Self.FK_Events_SummerOlympiads">
+            <End Role="SummerOlympiads" EntitySet="SummerOlympiads" />
+            <End Role="Events" EntitySet="Events" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rankings_Events" Association="Self.FK_Rankings_Events">
+            <End Role="Events" EntitySet="Events" />
+            <End Role="Rankings" EntitySet="Rankings" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OlympiadsModelStoreContainer" CdmEntityContainer="OlympiadsEntities">
+          <EntitySetMapping Name="Athletes">
+            <EntityTypeMapping TypeName="Olympiads.Model.Athlete">
+              <MappingFragment StoreEntitySet="Athletes">
+                <ScalarProperty Name="AthleteId" ColumnName="AthleteId" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="NationalityId" ColumnName="NationalityId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cities">
+            <EntityTypeMapping TypeName="Olympiads.Model.City">
+              <MappingFragment StoreEntitySet="Cities">
+                <ScalarProperty Name="CityId" ColumnName="CityId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Disciplines">
+            <EntityTypeMapping TypeName="Olympiads.Model.Discipline">
+              <MappingFragment StoreEntitySet="Disciplines">
+                <ScalarProperty Name="DisciplineId" ColumnName="DisciplineId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="SportId" ColumnName="SportId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Events">
+            <EntityTypeMapping TypeName="Olympiads.Model.Event">
+              <MappingFragment StoreEntitySet="Events">
+                <ScalarProperty Name="EventId" ColumnName="EventId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DisciplineId" ColumnName="DisciplineId" />
+                <ScalarProperty Name="SummerOlympiadId" ColumnName="SummerOlympiadId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Nationalities">
+            <EntityTypeMapping TypeName="Olympiads.Model.Nationality">
+              <MappingFragment StoreEntitySet="Nationalities">
+                <ScalarProperty Name="NationalityId" ColumnName="NationalityId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rankings">
+            <EntityTypeMapping TypeName="Olympiads.Model.Ranking">
+              <MappingFragment StoreEntitySet="Rankings">
+                <ScalarProperty Name="RankId" ColumnName="RankId" />
+                <ScalarProperty Name="AthleteId" ColumnName="AthleteId" />
+                <ScalarProperty Name="EventId" ColumnName="EventId" />
+                <ScalarProperty Name="Rank" ColumnName="Rank" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sports">
+            <EntityTypeMapping TypeName="Olympiads.Model.Sport">
+              <MappingFragment StoreEntitySet="Sports">
+                <ScalarProperty Name="SportId" ColumnName="SportId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SummerOlympiads">
+            <EntityTypeMapping TypeName="Olympiads.Model.SummerOlympiad">
+              <MappingFragment StoreEntitySet="SummerOlympiads">
+                <ScalarProperty Name="SummerOlympiadId" ColumnName="SummerOlympiadId" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="CityId" ColumnName="CityId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
