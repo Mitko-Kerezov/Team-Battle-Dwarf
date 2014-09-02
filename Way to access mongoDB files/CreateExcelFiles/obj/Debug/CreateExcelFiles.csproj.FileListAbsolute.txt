@@ -5,8 +5,6 @@ D:\DBTeamwork\trunk\Way to access mongoDB files\CreateExcelFiles\obj\Debug\Creat
 D:\DBTeamwork\trunk\Way to access mongoDB files\CreateExcelFiles\obj\Debug\CreateExcelFiles.csproj.ResolveComReference.cache
 D:\DBTeamwork\trunk\Way to access mongoDB files\CreateExcelFiles\obj\Debug\CreateExcelFiles.exe
 D:\DBTeamwork\trunk\Way to access mongoDB files\CreateExcelFiles\obj\Debug\CreateExcelFiles.pdb
-D:\DBTeamwork\trunk\Way to access mongoDB files\CreateExcelFiles\bin\Debug\EntityFramework.dll
-D:\DBTeamwork\trunk\Way to access mongoDB files\CreateExcelFiles\bin\Debug\EntityFramework.SqlServer.dll
 D:\DBTeamwork\trunk\Way to access mongoDB files\CreateExcelFiles\bin\Debug\SQLToMongoTransfer.exe
 D:\DBTeamwork\trunk\Way to access mongoDB files\CreateExcelFiles\bin\Debug\MongoDB.Bson.dll
 D:\DBTeamwork\trunk\Way to access mongoDB files\CreateExcelFiles\bin\Debug\MongoDB.Driver.dll
@@ -19,7 +17,5 @@ C:\Users\julian\Desktop\Way to access mongoDB files\CreateExcelFiles\bin\Debug\C
 C:\Users\julian\Desktop\Way to access mongoDB files\CreateExcelFiles\obj\Debug\CreateExcelFiles.csproj.ResolveComReference.cache
 C:\Users\julian\Desktop\Way to access mongoDB files\CreateExcelFiles\obj\Debug\CreateExcelFiles.exe
 C:\Users\julian\Desktop\Way to access mongoDB files\CreateExcelFiles\obj\Debug\CreateExcelFiles.pdb
-D:\Databases\Teamwork\Team-Battle-Dwarf\Way to access mongoDB files\CreateExcelFiles\bin\Debug\CreateExcelFiles.exe.config
-D:\Databases\Teamwork\Team-Battle-Dwarf\Way to access mongoDB files\CreateExcelFiles\obj\Debug\CreateExcelFiles.csproj.ResolveComReference.cache
-D:\Databases\Teamwork\Team-Battle-Dwarf\Way to access mongoDB files\CreateExcelFiles\obj\Debug\CreateExcelFiles.exe
-D:\Databases\Teamwork\Team-Battle-Dwarf\Way to access mongoDB files\CreateExcelFiles\obj\Debug\CreateExcelFiles.pdb
+D:\DBTeamwork\trunk\Way to access mongoDB files\CreateExcelFiles\bin\Debug\EntityFramework.dll
+D:\DBTeamwork\trunk\Way to access mongoDB files\CreateExcelFiles\bin\Debug\EntityFramework.SqlServer.dll

@@ -25,7 +25,6 @@ D:\DBTeamwork\trunk\Way to access mongoDB files\SQLToMongoTransfer\bin\Debug\Ent
 D:\DBTeamwork\trunk\Way to access mongoDB files\SQLToMongoTransfer\bin\Debug\EntityFramework.SqlServer.xml
 D:\DBTeamwork\trunk\Way to access mongoDB files\SQLToMongoTransfer\bin\Debug\MongoDB.Bson.xml
 D:\DBTeamwork\trunk\Way to access mongoDB files\SQLToMongoTransfer\bin\Debug\MongoDB.Driver.xml
-D:\DBTeamwork\trunk\Way to access mongoDB files\SQLToMongoTransfer\obj\Debug\SQLToMongoTransfer.csprojResolveAssemblyReference.cache
 C:\Users\julian\Desktop\Way to access mongoDB files\SQLToMongoTransfer\bin\Debug\SQLToMongoTransfer.exe.config
 C:\Users\julian\Desktop\Way to access mongoDB files\SQLToMongoTransfer\obj\Debug\SQLToMongoTransfer.exe
 C:\Users\julian\Desktop\Way to access mongoDB files\SQLToMongoTransfer\obj\Debug\SQLToMongoTransfer.pdb

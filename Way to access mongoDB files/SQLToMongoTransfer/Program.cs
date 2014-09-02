@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,24 +16,15 @@ namespace SQLToMongoTransfer
             SummerOlympicsEntities sqlEntities = new SummerOlympicsEntities();
 
             //connect to MongoDB
-            var mongoConnectionString = "mongodb://admin:admin@ds063769.mongolab.com:63769/battle_dwarf_team";
-            var mongoClient = new MongoClient(mongoConnectionString);
+            var mongoClient = new MongoClient("mongodb://localhost");
             var mongoServer = mongoClient.GetServer();
             var mongoDatabase = mongoServer.GetDatabase("battle_dwarf_team");
 
-            
-            //var coll = database.CreateCollection("Athletes");
-            //var athletes = mongoDatabase.GetCollection<Athlete>("Athletes");
-            //Athlete newAthl = new Athlete()
-            //{
-            //    Name = "Julian Genchev",
-            //    Country = " Bulgaria",
-            //    Gender = "Male"
-            //};
-            //athletes.Insert(newAthl);
-            //Console.WriteLine("Inserted a person: {0}", newAthl.AthletID);
 
-            //Athlete tmpAthlete = new Athlete();
+            //var coll = mongoDatabase.CreateCollection("Athletes");
+            //var athletes = mongoDatabase.GetCollection<Athlete>("Athletes");
+
+            //Person tmpAthlete = new Person();
             //var sqlAthlets =
             //    from athl in sqlEntities.Athletes
             //    select athl;
@@ -41,7 +32,8 @@ namespace SQLToMongoTransfer
             //foreach (var athl in sqlAthlets)
             //{
             //    count++;
-            //    tmpAthlete.AthletID = athl.AthletID;
+            //    tmpAthlete.Id = null;
+            //    tmpAthlete.PersonID = athl.AthletID;
             //    tmpAthlete.Name = athl.Name;
             //    tmpAthlete.Country = athl.Country;
             //    tmpAthlete.Gender = athl.Gender;
@@ -70,7 +62,7 @@ namespace SQLToMongoTransfer
             //{
             //    count++;
             //    tmpEvent.Id = null;
-            //    tmpEvent.CompetitionID = evt.CompetitionID;
+            //    tmpEvent.EventId = evt.CompetitionID;
             //    tmpEvent.Discipline = evt.Discipline;
             //    tmpEvent.Evt = evt.Event;
             //    tmpEvent.Sport = evt.Sport;
@@ -87,32 +79,33 @@ namespace SQLToMongoTransfer
             //    Console.WriteLine(e.Id);
             //}
 
-            //var mongoDBCreateCitiesResult = mongoDatabase.CreateCollection("Cities");
-            //var cities = mongoDatabase.GetCollection<City>("Cities");
-            //Cities tmpCity = new Cities();
-            //var sqlCity =
-            //    from city in sqlEntities.Cities
-            //    select city;
-            //count = 0;
-            //foreach (var city in sqlCity)
-            //{
-            //    count++;
-            //    tmpCity.Id = null;
-            //    tmpCity.CityID= city.CityID;
-            //    tmpCity.Name = city.City1;
-            //    tmpCity.Edition= city.Edition;
-            //    cities.Insert(tmpCity);
-            //    Console.Write("\rProcesing {0} records", count);
-            //}
-            //Console.Write("\rPress Enter");
-            //Console.ReadLine();
-            //var resultCities =
-            //    from c in cities.AsQueryable<City>()
-            //    select c;
-            //foreach (var e in resultCities)
-            //{
-            //    Console.WriteLine(e.CityID);
-            //}
+            var mongoDBCreateCitiesResult = mongoDatabase.CreateCollection("Cities");
+            var cities = mongoDatabase.GetCollection<City>("Cities");
+            Cities tmpCity = new Cities();
+            var sqlCity =
+                from city in sqlEntities.Cities
+                select city;
+            int count = 0;
+            foreach (var city in sqlCity)
+            {
+                count++;
+                tmpCity.Id = null;
+                tmpCity.CityID = city.CityID;
+                tmpCity.Name = city.City1;
+                tmpCity.Edition = city.Edition;
+                tmpCity.SpecialAnthem = null;
+                cities.Insert(tmpCity);
+                Console.Write("\rProcesing {0} records", count);
+            }
+            Console.Write("\rPress Enter");
+            Console.ReadLine();
+            var resultCities =
+                from c in cities.AsQueryable<Cities>()
+                select c;
+            foreach (var e in resultCities)
+            {
+                Console.WriteLine(e.Id);
+            }
 
         }
     }
