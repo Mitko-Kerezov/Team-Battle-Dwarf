@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{92B35D1C-7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.Data.Excel", "SummerOlympiads.Data.Excel\SummerOlympiads.Data.Excel.csproj", "{7AE16421-F2DF-41AC-9F82-2033547E1C2C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.Data.Mongo", "SummerOlympiads.Data.Mongo\SummerOlympiads.Data.Mongo.csproj", "{07025F4F-9598-4A0E-BF16-418D64A14B63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,11 +37,16 @@ Global
 		{7AE16421-F2DF-41AC-9F82-2033547E1C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AE16421-F2DF-41AC-9F82-2033547E1C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AE16421-F2DF-41AC-9F82-2033547E1C2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07025F4F-9598-4A0E-BF16-418D64A14B63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07025F4F-9598-4A0E-BF16-418D64A14B63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07025F4F-9598-4A0E-BF16-418D64A14B63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07025F4F-9598-4A0E-BF16-418D64A14B63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7AE16421-F2DF-41AC-9F82-2033547E1C2C} = {92B35D1C-7514-4D5A-B13C-9BD53BD0DBF8}
+		{07025F4F-9598-4A0E-BF16-418D64A14B63} = {92B35D1C-7514-4D5A-B13C-9BD53BD0DBF8}
 	EndGlobalSection
 EndGlobal
