@@ -1,11 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.Model", "SummerOlympiadsApplication\SummerOlympiads.Model.csproj", "{310B924D-59CA-4F75-BDDB-940684E3503D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.ConsoleClient", "SummerOlympiadsConsoleClient\SummerOlympiads.ConsoleClient.csproj", "{E38584DD-29A8-486A-8133-9F9F7F4C72D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.Utils", "SummerOlympiads.Utils\SummerOlympiads.Utils.csproj", "{C2173E3B-6674-4AE2-8664-F73C253F5B1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{92B35D1C-7514-4D5A-B13C-9BD53BD0DBF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.Data.Excel", "SummerOlympiads.Data.Excel\SummerOlympiads.Data.Excel.csproj", "{7AE16421-F2DF-41AC-9F82-2033547E1C2C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +27,19 @@ Global
 		{E38584DD-29A8-486A-8133-9F9F7F4C72D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E38584DD-29A8-486A-8133-9F9F7F4C72D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E38584DD-29A8-486A-8133-9F9F7F4C72D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2173E3B-6674-4AE2-8664-F73C253F5B1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2173E3B-6674-4AE2-8664-F73C253F5B1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2173E3B-6674-4AE2-8664-F73C253F5B1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2173E3B-6674-4AE2-8664-F73C253F5B1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AE16421-F2DF-41AC-9F82-2033547E1C2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AE16421-F2DF-41AC-9F82-2033547E1C2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AE16421-F2DF-41AC-9F82-2033547E1C2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AE16421-F2DF-41AC-9F82-2033547E1C2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7AE16421-F2DF-41AC-9F82-2033547E1C2C} = {92B35D1C-7514-4D5A-B13C-9BD53BD0DBF8}
 	EndGlobalSection
 EndGlobal

@@ -1,2 +1,0 @@
-E:\Telerik\GitHub\Team-Battle-Dwarf\SummerOlympiadsApplication\SummerOlympiadsConsoleClient\bin\Debug\SummerOlympiadsConsoleClient.exe.config
-E:\Telerik\GitHub\Team-Battle-Dwarf\SummerOlympiadsApplication\SummerOlympiadsConsoleClient\bin\Debug\SummerOlympiads.ConsoleClient.exe.config

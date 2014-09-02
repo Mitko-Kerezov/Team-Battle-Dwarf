@@ -56,6 +56,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SummerOlympiads.Data.Excel\SummerOlympiads.Data.Excel.csproj">
+      <Project>{7AE16421-F2DF-41AC-9F82-2033547E1C2C}</Project>
+      <Name>SummerOlympiads.Data.Excel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SummerOlympiads.Utils\SummerOlympiads.Utils.csproj">
+      <Project>{C2173E3B-6674-4AE2-8664-F73C253F5B1E}</Project>
+      <Name>SummerOlympiads.Utils</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SummerOlympiadsApplication\SummerOlympiads.Model.csproj">
       <Project>{310b924d-59ca-4f75-bddb-940684e3503d}</Project>
       <Name>SummerOlympiads.Model</Name>
