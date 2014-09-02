@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<olympiad year="1912" city="Stockholm">
+  <event name="C-2 500m (canoe double)" />
+  <event name="600m free rifle" />
+  <event name="100m running deer, single shots, team" />
+  <event name="72 - 79kg (middleweight)">
+    <athlete name="SATO, Tomoaki" rank="1" />
+  </event>
+  <event name="74 - 84kg">
+    <athlete name="PARK, Chunghee" rank="2" />
+  </event>
+  <event name="54 - 58kg" />
+  <event name="73 - 79kg (middleweight)" />
+  <event name="1/4 mile (402.3m)" />
+  <event name="52.16 - 56.7kg (featherweight)" />
+  <event name="- 58 kg" />
+  <event name="51 - 54kg (bantamweight)">
+    <athlete name="HEIJTING-SCHUHMACHER, Irma" rank="3" />
+  </event>
+</olympiad>

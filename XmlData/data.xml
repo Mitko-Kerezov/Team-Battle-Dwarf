@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<olympiad-notable-anthems>
+  <olympiad year="1936">
+    <anthem>Olympische Hymne</anthem>
+  </olympiad>
+   <olympiad year="1952">
+    <anthem>The Olympic Fanfare</anthem>
+  </olympiad>
+  <olympiad year="1958">
+    <anthem>Bugler's Dream</anthem>
+  </olympiad>
+  <olympiad year="1972">
+    <anthem>Olympic Fanfare 1972</anthem>
+  </olympiad>
+  <olympiad year="1984">
+    <anthem>Olympic Fanfare and Theme</anthem>
+  </olympiad>
+  <olympiad year="1988">
+    <anthem>The Olympic Spirit</anthem>
+  </olympiad>
+  <olympiad year="1996">
+    <anthem>Summon the Heroes</anthem>
+  </olympiad>
+</olympiad-notable-anthems>
