@@ -25,7 +25,7 @@ namespace SummerOlympiads.Data.Mongo {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("mongodb://admin:admin@ds063769.mongolab.com:63769/battle_dwarf_team")]
+        [global::System.Configuration.DefaultSettingValueAttribute("mongodb://localhost")]
         public string ConnectionString {
             get {
                 return ((string)(this["ConnectionString"]));

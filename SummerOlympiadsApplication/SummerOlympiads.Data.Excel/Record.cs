@@ -3,7 +3,7 @@
     /// <summary>
     /// Record representing a row in excelfile
     /// </summary>
-    internal class Record
+    public class Record
     {
         public readonly string EventId;
 

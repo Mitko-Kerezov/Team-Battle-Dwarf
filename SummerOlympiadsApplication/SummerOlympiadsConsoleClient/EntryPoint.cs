@@ -16,12 +16,13 @@
                 foreach (var file in files)
                 {
                     var importer = new ExcelReader(file);
-                    foreach (var row in importer)
+                    foreach (var record in importer)
                     {
-                        Console.WriteLine(row);
+                        Console.WriteLine(record.Year  + " " + record.PersonId);
                     }
                 }
             }
+            ZipHandler.CleanUp();
         }
     }
 }
