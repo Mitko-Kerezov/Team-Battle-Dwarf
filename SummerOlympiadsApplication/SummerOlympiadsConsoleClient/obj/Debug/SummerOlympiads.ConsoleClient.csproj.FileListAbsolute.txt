@@ -10,3 +10,15 @@ E:\Telerik\GitHub\Team-Battle-Dwarf\SummerOlympiadsApplication\SummerOlympiadsCo
 E:\Telerik\GitHub\Team-Battle-Dwarf\SummerOlympiadsApplication\SummerOlympiadsConsoleClient\bin\Debug\EntityFramework.SqlServer.xml
 E:\Telerik\GitHub\Team-Battle-Dwarf\SummerOlympiadsApplication\SummerOlympiadsConsoleClient\obj\Debug\SummerOlympiads.ConsoleClient.exe
 E:\Telerik\GitHub\Team-Battle-Dwarf\SummerOlympiadsApplication\SummerOlympiadsConsoleClient\obj\Debug\SummerOlympiads.ConsoleClient.pdb
+C:\Users\mitov\Desktop\Databases\Teamwork\Team-Battle-Dwarf\SummerOlympiadsApplication\SummerOlympiadsConsoleClient\bin\Debug\SummerOlympiads.ConsoleClient.exe.config
+C:\Users\mitov\Desktop\Databases\Teamwork\Team-Battle-Dwarf\SummerOlympiadsApplication\SummerOlympiadsConsoleClient\obj\Debug\SummerOlympiads.ConsoleClient.exe
+C:\Users\mitov\Desktop\Databases\Teamwork\Team-Battle-Dwarf\SummerOlympiadsApplication\SummerOlympiadsConsoleClient\obj\Debug\SummerOlympiads.ConsoleClient.pdb
+C:\Users\mitov\Desktop\Databases\Teamwork\Team-Battle-Dwarf\SummerOlympiadsApplication\SummerOlympiadsConsoleClient\bin\Debug\SummerOlympiads.ConsoleClient.exe
+C:\Users\mitov\Desktop\Databases\Teamwork\Team-Battle-Dwarf\SummerOlympiadsApplication\SummerOlympiadsConsoleClient\bin\Debug\SummerOlympiads.ConsoleClient.pdb
+C:\Users\mitov\Desktop\Databases\Teamwork\Team-Battle-Dwarf\SummerOlympiadsApplication\SummerOlympiadsConsoleClient\bin\Debug\EntityFramework.dll
+C:\Users\mitov\Desktop\Databases\Teamwork\Team-Battle-Dwarf\SummerOlympiadsApplication\SummerOlympiadsConsoleClient\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\mitov\Desktop\Databases\Teamwork\Team-Battle-Dwarf\SummerOlympiadsApplication\SummerOlympiadsConsoleClient\bin\Debug\SummerOlympiads.Model.dll
+C:\Users\mitov\Desktop\Databases\Teamwork\Team-Battle-Dwarf\SummerOlympiadsApplication\SummerOlympiadsConsoleClient\bin\Debug\SummerOlympiads.Model.pdb
+C:\Users\mitov\Desktop\Databases\Teamwork\Team-Battle-Dwarf\SummerOlympiadsApplication\SummerOlympiadsConsoleClient\bin\Debug\EntityFramework.xml
+C:\Users\mitov\Desktop\Databases\Teamwork\Team-Battle-Dwarf\SummerOlympiadsApplication\SummerOlympiadsConsoleClient\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\mitov\Desktop\Databases\Teamwork\Team-Battle-Dwarf\SummerOlympiadsApplication\SummerOlympiadsConsoleClient\obj\Debug\SummerOlympiads.ConsoleClient.csprojResolveAssemblyReference.cache

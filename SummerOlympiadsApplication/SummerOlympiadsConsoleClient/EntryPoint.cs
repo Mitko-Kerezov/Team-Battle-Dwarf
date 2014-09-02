@@ -1,18 +1,17 @@
 ﻿namespace SummerOlympiads.ConsoleClient
 {
     using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-     using System.Data.Entity;
 
-    using Model;
-    class EntryPoint
+    using SummerOlympiads.Model;
+
+    internal class EntryPoint
     {
-        static void Main()
+        private static void Main()
         {
-            Console.WriteLine("#TODO: Add records");
+            // TODO: add records in db
+            using (var db = new OlympiadsEntities())
+            {
+            }
         }
     }
 }
