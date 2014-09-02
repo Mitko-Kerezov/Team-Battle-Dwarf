@@ -1,8 +1,6 @@
 ﻿namespace SummerOlympiads.ConsoleClient
 {
-    using System;
-
-    using SummerOlympiads.Data.Excel;
+    using SummerOlympiads.Logic.SqlImporter;
     using SummerOlympiads.Model;
     using SummerOlympiads.Utils;
 
@@ -12,16 +10,10 @@
         {
             using (var db = new OlympiadsEntities())
             {
-                var files = ZipHandler.ExtractDefaultFile();
-                foreach (var file in files)
-                {
-                    var importer = new ExcelReader(file);
-                    foreach (var record in importer)
-                    {
-                        Console.WriteLine(record.Year  + " " + record.PersonId);
-                    }
-                }
+                var sqlImporter = new SqlImporter();
+                sqlImporter.Import(db);
             }
+
             ZipHandler.CleanUp();
         }
     }

@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E38584DD-29A8-486A-8133-9F9F7F4C72D0}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{5229018C-A763-49C6-B873-475D7E5EB693}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SummerOlympiads.ConsoleClient</RootNamespace>
-    <AssemblyName>SummerOlympiads.ConsoleClient</AssemblyName>
+    <RootNamespace>SummerOlympiads.Model.Mongo</RootNamespace>
+    <AssemblyName>SummerOlympiads.Model.Mongo</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,14 +30,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Bson.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\packages\mongocsharpdriver.1.9.2\lib\net35\MongoDB.Driver.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -48,38 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntryPoint.cs" />
+    <Compile Include="City.cs" />
+    <Compile Include="Event.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SummerOlympiads.Data.Excel\SummerOlympiads.Data.Excel.csproj">
-      <Project>{7AE16421-F2DF-41AC-9F82-2033547E1C2C}</Project>
-      <Name>SummerOlympiads.Data.Excel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SummerOlympiads.Data.Mongo\SummerOlympiads.Data.Mongo.csproj">
-      <Project>{07025F4F-9598-4A0E-BF16-418D64A14B63}</Project>
-      <Name>SummerOlympiads.Data.Mongo</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SummerOlympiads.Logic.SqlImporter\SummerOlympiads.Logic.SqlImporter.csproj">
-      <Project>{11FDEE04-55BF-4D5C-98A1-6E265E20711B}</Project>
-      <Name>SummerOlympiads.Logic.SqlImporter</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SummerOlympiads.Model.Mongo\SummerOlympiads.Model.Mongo.csproj">
-      <Project>{5229018C-A763-49C6-B873-475D7E5EB693}</Project>
-      <Name>SummerOlympiads.Model.Mongo</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SummerOlympiads.Utils\SummerOlympiads.Utils.csproj">
-      <Project>{C2173E3B-6674-4AE2-8664-F73C253F5B1E}</Project>
-      <Name>SummerOlympiads.Utils</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SummerOlympiadsApplication\SummerOlympiads.Model.csproj">
-      <Project>{310b924d-59ca-4f75-bddb-940684e3503d}</Project>
-      <Name>SummerOlympiads.Model</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

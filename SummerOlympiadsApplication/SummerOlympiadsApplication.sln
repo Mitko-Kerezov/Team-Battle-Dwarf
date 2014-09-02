@@ -15,6 +15,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.Data.Excel"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.Data.Mongo", "SummerOlympiads.Data.Mongo\SummerOlympiads.Data.Mongo.csproj", "{07025F4F-9598-4A0E-BF16-418D64A14B63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.Model.Mongo", "SummerOlympiads.Model.Mongo\SummerOlympiads.Model.Mongo.csproj", "{5229018C-A763-49C6-B873-475D7E5EB693}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{F81FB211-6D8A-4C85-B000-8E7A8FB5D6B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logic", "Logic", "{7E54D57C-A23D-41E0-99CB-163291762286}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.Logic.SqlImporter", "SummerOlympiads.Logic.SqlImporter\SummerOlympiads.Logic.SqlImporter.csproj", "{11FDEE04-55BF-4D5C-98A1-6E265E20711B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,12 +49,23 @@ Global
 		{07025F4F-9598-4A0E-BF16-418D64A14B63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07025F4F-9598-4A0E-BF16-418D64A14B63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07025F4F-9598-4A0E-BF16-418D64A14B63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5229018C-A763-49C6-B873-475D7E5EB693}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5229018C-A763-49C6-B873-475D7E5EB693}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5229018C-A763-49C6-B873-475D7E5EB693}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5229018C-A763-49C6-B873-475D7E5EB693}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11FDEE04-55BF-4D5C-98A1-6E265E20711B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11FDEE04-55BF-4D5C-98A1-6E265E20711B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11FDEE04-55BF-4D5C-98A1-6E265E20711B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11FDEE04-55BF-4D5C-98A1-6E265E20711B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{310B924D-59CA-4F75-BDDB-940684E3503D} = {F81FB211-6D8A-4C85-B000-8E7A8FB5D6B1}
 		{7AE16421-F2DF-41AC-9F82-2033547E1C2C} = {92B35D1C-7514-4D5A-B13C-9BD53BD0DBF8}
 		{07025F4F-9598-4A0E-BF16-418D64A14B63} = {92B35D1C-7514-4D5A-B13C-9BD53BD0DBF8}
+		{5229018C-A763-49C6-B873-475D7E5EB693} = {F81FB211-6D8A-4C85-B000-8E7A8FB5D6B1}
+		{11FDEE04-55BF-4D5C-98A1-6E265E20711B} = {7E54D57C-A23D-41E0-99CB-163291762286}
 	EndGlobalSection
 EndGlobal
