@@ -25,7 +25,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.Logic.SqlIm
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Xml", "Xml", "{31702FB8-D417-4E08-88C9-51704A4622FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.XMLReport", "SummerOlympiads.XMLReport\SummerOlympiads.XMLReport.csproj", "{64350515-758C-4E6B-B9AC-AA5B4F3AF0A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.XmlReport", "SummerOlympiads.XMLReport\SummerOlympiads.XmlReport.csproj", "{64350515-758C-4E6B-B9AC-AA5B4F3AF0A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.XmlDataLoader", "SummerOlympiads.XmlDataLoader\SummerOlympiads.XmlDataLoader.csproj", "{2B7E59A9-4994-4166-86E3-9A12A82351FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +67,10 @@ Global
 		{64350515-758C-4E6B-B9AC-AA5B4F3AF0A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64350515-758C-4E6B-B9AC-AA5B4F3AF0A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64350515-758C-4E6B-B9AC-AA5B4F3AF0A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B7E59A9-4994-4166-86E3-9A12A82351FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B7E59A9-4994-4166-86E3-9A12A82351FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B7E59A9-4994-4166-86E3-9A12A82351FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B7E59A9-4994-4166-86E3-9A12A82351FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,5 +82,6 @@ Global
 		{07025F4F-9598-4A0E-BF16-418D64A14B63} = {92B35D1C-7514-4D5A-B13C-9BD53BD0DBF8}
 		{11FDEE04-55BF-4D5C-98A1-6E265E20711B} = {7E54D57C-A23D-41E0-99CB-163291762286}
 		{64350515-758C-4E6B-B9AC-AA5B4F3AF0A4} = {31702FB8-D417-4E08-88C9-51704A4622FE}
+		{2B7E59A9-4994-4166-86E3-9A12A82351FE} = {31702FB8-D417-4E08-88C9-51704A4622FE}
 	EndGlobalSection
 EndGlobal

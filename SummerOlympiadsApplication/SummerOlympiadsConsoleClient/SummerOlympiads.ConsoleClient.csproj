@@ -76,9 +76,13 @@
       <Project>{C2173E3B-6674-4AE2-8664-F73C253F5B1E}</Project>
       <Name>SummerOlympiads.Utils</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SummerOlympiads.XMLReport\SummerOlympiads.XMLReport.csproj">
+    <ProjectReference Include="..\SummerOlympiads.XmlDataLoader\SummerOlympiads.XmlDataLoader.csproj">
+      <Project>{2b7e59a9-4994-4166-86e3-9a12a82351fe}</Project>
+      <Name>SummerOlympiads.XmlDataLoader</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SummerOlympiads.XMLReport\SummerOlympiads.XmlReport.csproj">
       <Project>{64350515-758c-4e6b-b9ac-aa5b4f3af0a4}</Project>
-      <Name>SummerOlympiads.XMLReport</Name>
+      <Name>SummerOlympiads.XmlReport</Name>
     </ProjectReference>
     <ProjectReference Include="..\SummerOlympiadsApplication\SummerOlympiads.Model.csproj">
       <Project>{310b924d-59ca-4f75-bddb-940684e3503d}</Project>

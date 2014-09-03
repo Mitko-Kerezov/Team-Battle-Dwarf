@@ -50,8 +50,8 @@
             <PropertyRef Name="RankId" />
           </Key>
           <Property Name="RankId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="AthleteId" Type="int" Nullable="false" />
-          <Property Name="EventId" Type="int" Nullable="false" />
+          <Property Name="AthleteId" Type="int" />
+          <Property Name="EventId" Type="int" />
           <Property Name="Rank" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Sports">
@@ -68,6 +68,7 @@
           <Property Name="SummerOlympiadId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Year" Type="int" Nullable="false" />
           <Property Name="CityId" Type="int" />
+          <Property Name="NotableAnthem" Type="varchar" MaxLength="50" />
         </EntityType>
         <Association Name="FK_Athletes_Nationalities">
           <End Role="Nationalities" Type="Self.Nationalities" Multiplicity="0..1" />
@@ -118,7 +119,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Rankings_Athletes">
-          <End Role="Athletes" Type="Self.Athletes" Multiplicity="1" />
+          <End Role="Athletes" Type="Self.Athletes" Multiplicity="0..1" />
           <End Role="Rankings" Type="Self.Rankings" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Athletes">
@@ -130,7 +131,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Rankings_Events">
-          <End Role="Events" Type="Self.Events" Multiplicity="1" />
+          <End Role="Events" Type="Self.Events" Multiplicity="0..1" />
           <End Role="Rankings" Type="Self.Rankings" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Events">
@@ -272,6 +273,7 @@
           <Property Name="CityId" Type="Int32" />
           <NavigationProperty Name="City" Relationship="Self.FK_SummerOlympiads_Cities" FromRole="SummerOlympiads" ToRole="Cities" />
           <NavigationProperty Name="Events" Relationship="Self.FK_Events_SummerOlympiads" FromRole="SummerOlympiads" ToRole="Events" />
+          <Property Name="NotableAnthem" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK_Athletes_Nationalities">
           <End Role="Nationalities" Type="Self.Nationality" Multiplicity="0..1" />
@@ -467,6 +469,7 @@
           <EntitySetMapping Name="SummerOlympiads">
             <EntityTypeMapping TypeName="Olympiads.Model.SummerOlympiad">
               <MappingFragment StoreEntitySet="SummerOlympiads">
+                <ScalarProperty Name="NotableAnthem" ColumnName="NotableAnthem" />
                 <ScalarProperty Name="SummerOlympiadId" ColumnName="SummerOlympiadId" />
                 <ScalarProperty Name="Year" ColumnName="Year" />
                 <ScalarProperty Name="CityId" ColumnName="CityId" />

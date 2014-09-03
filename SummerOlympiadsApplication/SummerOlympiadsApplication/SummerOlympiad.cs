@@ -22,6 +22,7 @@ namespace SummerOlympiads.Model
         public int SummerOlympiadId { get; set; }
         public int Year { get; set; }
         public Nullable<int> CityId { get; set; }
+        public string NotableAnthem { get; set; }
     
         public virtual City City { get; set; }
         public virtual ICollection<Event> Events { get; set; }

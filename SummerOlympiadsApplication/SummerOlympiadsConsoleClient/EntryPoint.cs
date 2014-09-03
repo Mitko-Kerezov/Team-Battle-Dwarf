@@ -1,6 +1,9 @@
 ﻿namespace SummerOlympiads.ConsoleClient
 {
-    using Xml.XMLReport;
+    using System.Linq;
+
+    using Xml.XmlDataLoader;
+    using Xml.XmlReport;
     using Logic.SqlImporter;
     using Model;
     using Utils;
@@ -20,11 +23,19 @@
 
             //This part can be used to generate a report for a specific year
             //Note that some olympiads may not have medal-winners
-            using (var db = new OlympiadsEntities())
-            {
-                var xmlReporter = new XMLReportGenerator(db);
-                xmlReporter.GenerateXMLReport(1912);
-            }
+            //using (var db = new OlympiadsEntities())
+            //{
+            //    var xmlReporter = new XmlReportGenerator(db);
+            //    xmlReporter.GenerateXMLReport(1912);
+            //}
+
+            //Used to update SQL Server and MongoDb with the xml data from the file fileName
+            //var fileName = "data";
+            //using (var db = new OlympiadsEntities())
+            //{
+            //    var xmlLoader = new XmlDataLoader(db);
+            //    xmlLoader.UpdateFromXml(fileName);
+            //}
         }
     }
 }
