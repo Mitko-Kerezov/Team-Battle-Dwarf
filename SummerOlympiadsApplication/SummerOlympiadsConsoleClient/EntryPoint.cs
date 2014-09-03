@@ -2,40 +2,48 @@
 {
     using System.Linq;
 
-    using Xml.XmlDataLoader;
-    using Xml.XmlReport;
-    using Logic.SqlImporter;
-    using Model;
-    using Utils;
+    using SummerOlympiads.Data.Pdf;
+    using SummerOlympiads.Logic.SqlImporter;
+    using SummerOlympiads.Model;
+    using SummerOlympiads.Utils;
+    using SummerOlympiads.Xml.XmlDataLoader;
+    using SummerOlympiads.Xml.XmlReport;
 
     internal class EntryPoint
     {
         private static void Main()
         {
-            //This part of the code can be used to import data from mongo and excel to SQL
-            //using (var db = new OlympiadsEntities())
-            //{
-            //    var sqlImporter = new SqlImporter();
-            //    sqlImporter.Import(db);
-            //}
+            // This part of the code can be used to import data from mongo and excel to SQL
+            // using (var db = new OlympiadsEntities())
+            // {
+            // var sqlImporter = new SqlImporter();
+            // sqlImporter.Import(db);
+            // }
 
-            //ZipHandler.CleanUp();
 
-            //This part can be used to generate a report for a specific year
-            //Note that some olympiads may not have medal-winners
-            //using (var db = new OlympiadsEntities())
-            //{
-            //    var xmlReporter = new XmlReportGenerator(db);
-            //    xmlReporter.GenerateXMLReport(1912);
-            //}
+            // Make reports for medals by nationality in pdf
+            using (var db = new OlympiadsEntities())
+            {
+                var report = new ReportMedalsByNations(db);
+                report.Generate();
+                
+            }
 
-            //Used to update SQL Server and MongoDb with the xml data from the file fileName
-            //var fileName = "data";
-            //using (var db = new OlympiadsEntities())
-            //{
-            //    var xmlLoader = new XmlDataLoader(db);
-            //    xmlLoader.UpdateFromXml(fileName);
-            //}
+            // This part can be used to generate a report for a specific year
+            // Note that some olympiads may not have medal-winners
+            // using (var db = new OlympiadsEntities())
+            // {
+            // var xmlReporter = new XmlReportGenerator(db);
+            // xmlReporter.GenerateXMLReport(1912);
+            // }
+
+            //// Used to update SQL Server and MongoDb with the xml data from the file fileName
+            // var fileName = "data";
+            // using (var db = new OlympiadsEntities())
+            // {
+            // var xmlLoader = new XmlDataLoader(db);
+            // xmlLoader.UpdateFromXml(fileName);
+            // }
         }
     }
 }

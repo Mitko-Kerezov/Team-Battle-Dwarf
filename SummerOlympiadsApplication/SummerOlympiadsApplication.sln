@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.Model", "SummerOlympiadsApplication\SummerOlympiads.Model.csproj", "{310B924D-59CA-4F75-BDDB-940684E3503D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.ConsoleClient", "SummerOlympiadsConsoleClient\SummerOlympiads.ConsoleClient.csproj", "{E38584DD-29A8-486A-8133-9F9F7F4C72D0}"
@@ -27,7 +29,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.XmlReport",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.XmlDataLoader", "SummerOlympiads.XmlDataLoader\SummerOlympiads.XmlDataLoader.csproj", "{2B7E59A9-4994-4166-86E3-9A12A82351FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfClient", "WpfClient\WpfClient.csproj", "{18AD73BD-DC4A-44C0-AB27-119638AB75E8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E088B503-85C2-4CBC-8548-DA33CE62893E}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.Data.Pdf", "SummerOlympiads.Data.Pdf\SummerOlympiads.Data.Pdf.csproj", "{1C57DA54-4471-466E-97DE-251FC47EFEA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.Model.Reports", "SymmerOlympiads.Model.Reports\SummerOlympiads.Model.Reports.csproj", "{71B551FE-5A38-4448-8839-B79C5BAAAA8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,21 +82,27 @@ Global
 		{2B7E59A9-4994-4166-86E3-9A12A82351FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B7E59A9-4994-4166-86E3-9A12A82351FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B7E59A9-4994-4166-86E3-9A12A82351FE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{18AD73BD-DC4A-44C0-AB27-119638AB75E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{18AD73BD-DC4A-44C0-AB27-119638AB75E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{18AD73BD-DC4A-44C0-AB27-119638AB75E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{18AD73BD-DC4A-44C0-AB27-119638AB75E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C57DA54-4471-466E-97DE-251FC47EFEA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C57DA54-4471-466E-97DE-251FC47EFEA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C57DA54-4471-466E-97DE-251FC47EFEA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C57DA54-4471-466E-97DE-251FC47EFEA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71B551FE-5A38-4448-8839-B79C5BAAAA8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71B551FE-5A38-4448-8839-B79C5BAAAA8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71B551FE-5A38-4448-8839-B79C5BAAAA8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71B551FE-5A38-4448-8839-B79C5BAAAA8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{5229018C-A763-49C6-B873-475D7E5EB693} = {F81FB211-6D8A-4C85-B000-8E7A8FB5D6B1}
 		{310B924D-59CA-4F75-BDDB-940684E3503D} = {F81FB211-6D8A-4C85-B000-8E7A8FB5D6B1}
 		{7AE16421-F2DF-41AC-9F82-2033547E1C2C} = {92B35D1C-7514-4D5A-B13C-9BD53BD0DBF8}
 		{07025F4F-9598-4A0E-BF16-418D64A14B63} = {92B35D1C-7514-4D5A-B13C-9BD53BD0DBF8}
+		{5229018C-A763-49C6-B873-475D7E5EB693} = {F81FB211-6D8A-4C85-B000-8E7A8FB5D6B1}
 		{11FDEE04-55BF-4D5C-98A1-6E265E20711B} = {7E54D57C-A23D-41E0-99CB-163291762286}
 		{64350515-758C-4E6B-B9AC-AA5B4F3AF0A4} = {31702FB8-D417-4E08-88C9-51704A4622FE}
 		{2B7E59A9-4994-4166-86E3-9A12A82351FE} = {31702FB8-D417-4E08-88C9-51704A4622FE}
+		{1C57DA54-4471-466E-97DE-251FC47EFEA3} = {92B35D1C-7514-4D5A-B13C-9BD53BD0DBF8}
+		{71B551FE-5A38-4448-8839-B79C5BAAAA8B} = {F81FB211-6D8A-4C85-B000-8E7A8FB5D6B1}
 	EndGlobalSection
 EndGlobal

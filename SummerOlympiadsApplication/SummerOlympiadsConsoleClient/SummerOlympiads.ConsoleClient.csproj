@@ -11,6 +11,8 @@
     <AssemblyName>SummerOlympiads.ConsoleClient</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -64,6 +66,10 @@
       <Project>{07025F4F-9598-4A0E-BF16-418D64A14B63}</Project>
       <Name>SummerOlympiads.Data.Mongo</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SummerOlympiads.Data.Pdf\SummerOlympiads.Data.Pdf.csproj">
+      <Project>{1C57DA54-4471-466E-97DE-251FC47EFEA3}</Project>
+      <Name>SummerOlympiads.Data.Pdf</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SummerOlympiads.Logic.SqlImporter\SummerOlympiads.Logic.SqlImporter.csproj">
       <Project>{11FDEE04-55BF-4D5C-98A1-6E265E20711B}</Project>
       <Name>SummerOlympiads.Logic.SqlImporter</Name>
@@ -90,6 +96,13 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
