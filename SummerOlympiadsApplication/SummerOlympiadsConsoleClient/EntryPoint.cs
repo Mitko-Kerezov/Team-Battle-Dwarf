@@ -2,12 +2,15 @@
 {
     using System.Linq;
 
-    using SummerOlympiads.Data.Pdf;
-    using SummerOlympiads.Logic.SqlImporter;
-    using SummerOlympiads.Model;
-    using SummerOlympiads.Utils;
-    using SummerOlympiads.Xml.XmlDataLoader;
-    using SummerOlympiads.Xml.XmlReport;
+    using Data.Pdf;
+    using Logic.SqlImporter;
+    using Model;
+    using Utils;
+    using Xml.XmlDataLoader;
+    using Xml.XmlReport;
+    using JSON.JSONExporter;
+    using Model.MySQL;
+    using Logic.MySQLImport;
 
     internal class EntryPoint
     {
@@ -22,12 +25,12 @@
 
 
             // Make reports for medals by nationality in pdf
-            using (var db = new OlympiadsEntities())
-            {
-                var report = new ReportMedalsByNations(db);
-                report.Generate();
+            //using (var db = new OlympiadsEntities())
+            //{
+            //    var report = new ReportMedalsByNations(db);
+            //    report.Generate();
                 
-            }
+            //}
 
             // This part can be used to generate a report for a specific year
             // Note that some olympiads may not have medal-winners
@@ -44,6 +47,31 @@
             // var xmlLoader = new XmlDataLoader(db);
             // xmlLoader.UpdateFromXml(fileName);
             // }
+
+            //Generate JSON Reports
+            //using (var db = new OlympiadsEntities())
+            //{
+            //    var reporter = new JSONReporter(db);
+            //    reporter.SaveJSONObjectsToFile();
+            //}
+
+            //Load reports in MySQL
+            //GoldMedalists mysqlDB = new GoldMedalists();
+            //using (mysqlDB)
+            //{
+            //    var sqlImporter = new MySQLImporter();
+            //    sqlImporter.Import(mysqlDB);
+            //}
+
+            //TODO: For task 06 - this is how you get all records from the mysql database
+            //GoldMedalists mysqlDB = new GoldMedalists();
+            //using(mysqlDB)
+            //{
+            //    foreach (var medalist in mysqlDB.Goldmedalists)
+            //    {
+            //        System.Console.WriteLine(medalist.Name);
+            //    }
+            //}
         }
     }
 }

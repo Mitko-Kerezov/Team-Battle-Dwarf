@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DomainModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="2.0.0.0" name="GoldMedalists" namespace="SummerOlympiads.Model.MySQL" showPropertiesCompartment="true" xmlns="http://www.telerik.com/ORM">
+  <orm:orm name="GoldMedalists" backend="mysql" xmlns:orm="http://tempuri.org/ORM">
+    <orm:namespace name="SummerOlympiads.Model.MySQL" default="true">
+      <orm:class name="Goldmedalist" uniqueId="6d1010a5-0fc3-420a-9085-2894d37befe9">
+        <orm:table name="goldmedalists" />
+        <orm:identity>
+          <orm:key-generator name="autoinc">
+            <orm:key-generator-member property-name="Id" />
+          </orm:key-generator>
+          <orm:single-field field-name="_id" />
+        </orm:identity>
+        <orm:concurrency strategy="changed" />
+        <orm:field name="_id" property="Id" behavior="readwrite" uniqueId="de9fe162-d72c-46ac-9190-7db79bdc98b8" type="System.Int32">
+          <orm:column name="id" sql-type="integer" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        </orm:field>
+        <orm:field name="_name" property="Name" behavior="readwrite" uniqueId="032d5e0a-d005-48a9-bb4b-be7d58e9b54f" type="System.String">
+          <orm:column name="name" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+        <orm:field name="_event" property="Event" behavior="readwrite" uniqueId="b3e00064-e5e3-4018-af6d-abe3958475d7" type="System.String">
+          <orm:column name="event" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        </orm:field>
+      </orm:class>
+    </orm:namespace>
+    <orm:schema schema="">
+      <orm:table name="goldmedalists">
+        <orm:column name="id" sql-type="integer" nullable="false" length="0" scale="0" primary-key="true" backend-calculated="true" ado-type="Int32" />
+        <orm:column name="name" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+        <orm:column name="event" sql-type="nvarchar" nullable="false" length="50" scale="0" ado-type="UnicodeStringVariableLength" />
+      </orm:table>
+    </orm:schema>
+    <orm:relational-naming-settings>
+      <orm:source-strategy>Property</orm:source-strategy>
+      <orm:remove-camel-case>False</orm:remove-camel-case>
+    </orm:relational-naming-settings>
+  </orm:orm>
+  <ModelSettings xmlns="">
+    <AppConfigConnectionPropertyName>GoldmedalistsConnection</AppConfigConnectionPropertyName>
+    <AppConfigConnectionString>server=localhost;user id=root;database=goldmedalists;pwd=SQL_rootpa55word</AppConfigConnectionString>
+    <NamingSettings>
+      <ClassRules>
+        <CaseMode>PascalCase</CaseMode>
+        <PluralizationMode>Singularize</PluralizationMode>
+      </ClassRules>
+      <FieldRules>
+        <AddPrefix>_</AddPrefix>
+        <CaseMode>CamelCase</CaseMode>
+      </FieldRules>
+      <PropertyRules>
+        <CaseMode>PascalCase</CaseMode>
+      </PropertyRules>
+      <NavigationPropertyRules />
+    </NamingSettings>
+    <CodeGenerationSettings>
+      <MappingDefinitionType>Xml</MappingDefinitionType>
+    </CodeGenerationSettings>
+    <SchemaUpdateSettings />
+    <BackendConfigurationSettings>
+      <BackendConfiguration>
+        <Backend>MySql</Backend>
+        <ProviderName>MySql.Data.MySqlClient</ProviderName>
+      </BackendConfiguration>
+    </BackendConfigurationSettings>
+  </ModelSettings>
+  <Types>
+    <DomainClass Id="6d1010a5-0fc3-420a-9085-2894d37befe9" name="Goldmedalist" namespace="SummerOlympiads.Model.MySQL" showPropertiesCompartment="true" identityMechanism="DatabaseServerCalculated" concurrencyMode="Changed" showNavigationCompartment="true" showImplementationCompartment="true" identityMechanismMember="Id">
+      <Property Id="de9fe162-d72c-46ac-9190-7db79bdc98b8" name="Id" type="Int32" label="Id : Int32" kind="Persistent" identity="true" fieldName="_id" />
+      <Property Id="b3e00064-e5e3-4018-af6d-abe3958475d7" name="Event" label="Event : String" kind="Persistent" fieldName="_event" />
+      <Property Id="032d5e0a-d005-48a9-bb4b-be7d58e9b54f" name="Name" label="Name : String" kind="Persistent" fieldName="_name" />
+    </DomainClass>
+  </Types>
+  <domainContext>
+    <domainModelHasDomainContext Id="4aca7874-22e4-4c8f-bca5-4f154b03d26b">
+      <domainContainer name="GoldMedalists" namespace="SummerOlympiads.Model.MySQL" showPropertiesCompartment="true">
+        <entitySetProperty name="Goldmedalists" namespace="SummerOlympiads.Model.MySQL" type="Goldmedalist" label="Goldmedalists : IQueryable&lt;SummerOlympiads.Model.MySQL.Goldmedalist&gt;" />
+      </domainContainer>
+    </domainModelHasDomainContext>
+  </domainContext>
+</DomainModel>

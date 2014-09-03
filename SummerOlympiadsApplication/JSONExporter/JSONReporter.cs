@@ -1,4 +1,4 @@
-﻿namespace SummerOlympiads.JSONExporter
+﻿namespace SummerOlympiads.JSON.JSONExporter
 {
     using System.Linq;
     using System.Web.Script.Serialization;

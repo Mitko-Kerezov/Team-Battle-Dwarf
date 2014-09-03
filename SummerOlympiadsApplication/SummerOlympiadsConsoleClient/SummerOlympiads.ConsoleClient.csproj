@@ -48,6 +48,8 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="Telerik.OpenAccess, Version=2013.3.1320.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.OpenAccess.35.Extensions, Version=2013.3.1320.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntryPoint.cs" />
@@ -58,6 +60,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\JSONExporter\SummerOlympiads.JSONExporter.csproj">
+      <Project>{dc60bafe-527e-4e06-a11b-02417f740f50}</Project>
+      <Name>SummerOlympiads.JSONExporter</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SummerOlympiads.Data.Excel\SummerOlympiads.Data.Excel.csproj">
       <Project>{7AE16421-F2DF-41AC-9F82-2033547E1C2C}</Project>
       <Name>SummerOlympiads.Data.Excel</Name>
@@ -70,6 +76,10 @@
       <Project>{1C57DA54-4471-466E-97DE-251FC47EFEA3}</Project>
       <Name>SummerOlympiads.Data.Pdf</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SummerOlympiads.Logic.MySQLImport\SummerOlympiads.Logic.MySQLImport.csproj">
+      <Project>{9536cbf5-4401-4927-befb-41354de7c973}</Project>
+      <Name>SummerOlympiads.Logic.MySQLImport</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SummerOlympiads.Logic.SqlImporter\SummerOlympiads.Logic.SqlImporter.csproj">
       <Project>{11FDEE04-55BF-4D5C-98A1-6E265E20711B}</Project>
       <Name>SummerOlympiads.Logic.SqlImporter</Name>
@@ -77,6 +87,10 @@
     <ProjectReference Include="..\SummerOlympiads.Model.Mongo\SummerOlympiads.Model.Mongo.csproj">
       <Project>{5229018C-A763-49C6-B873-475D7E5EB693}</Project>
       <Name>SummerOlympiads.Model.Mongo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SummerOlympiads.Model.MySQL\SummerOlympiads.Model.MySQL.csproj">
+      <Project>{05b01f88-76b5-4db2-bf01-833eeee65573}</Project>
+      <Name>SummerOlympiads.Model.MySQL</Name>
     </ProjectReference>
     <ProjectReference Include="..\SummerOlympiads.Utils\SummerOlympiads.Utils.csproj">
       <Project>{C2173E3B-6674-4AE2-8664-F73C253F5B1E}</Project>
