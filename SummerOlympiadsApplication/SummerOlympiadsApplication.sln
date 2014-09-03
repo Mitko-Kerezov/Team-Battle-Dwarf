@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.Model", "SummerOlympiadsApplication\SummerOlympiads.Model.csproj", "{310B924D-59CA-4F75-BDDB-940684E3503D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.ConsoleClient", "SummerOlympiadsConsoleClient\SummerOlympiads.ConsoleClient.csproj", "{E38584DD-29A8-486A-8133-9F9F7F4C72D0}"
@@ -28,6 +26,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.XmlReport", "SummerOlympiads.XMLReport\SummerOlympiads.XmlReport.csproj", "{64350515-758C-4E6B-B9AC-AA5B4F3AF0A4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.XmlDataLoader", "SummerOlympiads.XmlDataLoader\SummerOlympiads.XmlDataLoader.csproj", "{2B7E59A9-4994-4166-86E3-9A12A82351FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfClient", "WpfClient\WpfClient.csproj", "{18AD73BD-DC4A-44C0-AB27-119638AB75E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +71,10 @@ Global
 		{2B7E59A9-4994-4166-86E3-9A12A82351FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B7E59A9-4994-4166-86E3-9A12A82351FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B7E59A9-4994-4166-86E3-9A12A82351FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18AD73BD-DC4A-44C0-AB27-119638AB75E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18AD73BD-DC4A-44C0-AB27-119638AB75E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18AD73BD-DC4A-44C0-AB27-119638AB75E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18AD73BD-DC4A-44C0-AB27-119638AB75E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
