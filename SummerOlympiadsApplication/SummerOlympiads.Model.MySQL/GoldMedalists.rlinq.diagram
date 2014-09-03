@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityDiagrams>
+  <entityDiagramsDiagram dslVersion="2.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="GoldMedalists" isDefault="true">
+    <DomainModelMoniker name="/GoldMedalists" />
+    <nestedChildShapes>
+      <classShape Id="8cea849a-c1e7-41a2-9807-898704a60d4b" absoluteBounds="0.75, 0.75, 1.5, 1.9550732421875008">
+        <DomainClassMoniker name="/GoldMedalists/Goldmedalist" />
+        <nestedChildShapes>
+          <elementListCompartment Id="2d3303bb-5838-4b52-b195-727bcbed8378" absoluteBounds="0.765, 1.2599999999999998, 1.4700000000000002, 0.8262939453125" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="78b5f184-8ad3-4a11-a260-fc426db9a56e" absoluteBounds="0.765, 2.0962939453125, 1.4700000000000002, 0.2493896484375" name="ImplementationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+          <elementListCompartment Id="97d4c37a-d72e-4a44-bc42-72c632a84c73" absoluteBounds="0.765, 2.3556835937500002, 1.4700000000000002, 0.2493896484375" name="NavigationCompartment" titleTextColor="Black" itemTextColor="Black" />
+        </nestedChildShapes>
+      </classShape>
+    </nestedChildShapes>
+  </entityDiagramsDiagram>
+</EntityDiagrams>
