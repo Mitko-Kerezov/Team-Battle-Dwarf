@@ -64,3 +64,4 @@ bin
 /SummerOlympiadsApplication/SummerOlympiadsApplication/obj/Debug/edmxResourcesToEmbed/OlympiadsDB.csdl
 /SummerOlympiadsApplication/SummerOlympiadsApplication/obj/Debug/edmxResourcesToEmbed/OlympiadsDB.msl
 /SummerOlympiadsApplication/SummerOlympiadsApplication/obj/Debug/edmxResourcesToEmbed/OlympiadsDB.ssdl
+*.pdf

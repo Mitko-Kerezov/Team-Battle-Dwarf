@@ -1,6 +1,7 @@
 ﻿namespace SummerOlympiads.ConsoleClient
 {
     using System.Linq;
+    using System.IO;
 
     using Data.Pdf;
     using Logic.SqlImporter;
@@ -11,20 +12,24 @@
     using JSON.JSONExporter;
     using Model.MySQL;
     using Logic.MySQLImport;
+    using Data.SQLite;
+    using Model.SQLite;
+    using Logic.ExcelExport;
 
     internal class EntryPoint
     {
         private static void Main()
         {
-            // This part of the code can be used to import data from mongo and excel to SQL
+            // Task 01
             // using (var db = new OlympiadsEntities())
             // {
             // var sqlImporter = new SqlImporter();
             // sqlImporter.Import(db);
             // }
+            //ZipHandler.CleanUp();
 
 
-            // Make reports for medals by nationality in pdf
+            // Task 02
             //using (var db = new OlympiadsEntities())
             //{
             //    var report = new ReportMedalsByNations(db);
@@ -32,32 +37,22 @@
                 
             //}
             //
-            //ZipHandler.CleanUp();
 
-            // This part can be used to generate a report for a specific year
-            // Note that some olympiads may not have medal-winners
+            // Task 03
             // using (var db = new OlympiadsEntities())
             // {
             // var xmlReporter = new XmlReportGenerator(db);
             // xmlReporter.GenerateXMLReport(1912);
             // }
 
-            //// Used to update SQL Server and MongoDb with the xml data from the file fileName
-            // var fileName = "data";
-            // using (var db = new OlympiadsEntities())
-            // {
-            // var xmlLoader = new XmlDataLoader(db);
-            // xmlLoader.UpdateFromXml(fileName);
-            // }
-
-            //Generate JSON Reports
+            // Task 04
             //using (var db = new OlympiadsEntities())
             //{
             //    var reporter = new JSONReporter(db);
             //    reporter.SaveJSONObjectsToFile();
             //}
 
-            //Load reports in MySQL
+            // Task 04 Part II - Load reports in MySQL
             //GoldMedalists mysqlDB = new GoldMedalists();
             //using (mysqlDB)
             //{
@@ -65,15 +60,21 @@
             //    sqlImporter.Import(mysqlDB);
             //}
 
-            //TODO: For task 06 - this is how you get all records from the mysql database
+            // Task 05
+            // var fileName = "data";
+            // using (var db = new OlympiadsEntities())
+            // {
+            // var xmlLoader = new XmlDataLoader(db);
+            // xmlLoader.UpdateFromXml(fileName);
+            // }
+
+            //Task 06
             //GoldMedalists mysqlDB = new GoldMedalists();
-            //using(mysqlDB)
-            //{
-            //    foreach (var medalist in mysqlDB.Goldmedalists)
-            //    {
-            //        System.Console.WriteLine(medalist.Name);
-            //    }
-            //}
+            //var sqlLiteDB = new GoldMedalistAgesContext();
+
+            //var excelExporter = new ExcelExporter();
+            //excelExporter.ExportToExcel(mysqlDB, sqlLiteDB);
+            
         }
     }
 }

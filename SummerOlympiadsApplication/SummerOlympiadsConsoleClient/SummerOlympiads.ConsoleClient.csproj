@@ -76,6 +76,14 @@
       <Project>{1C57DA54-4471-466E-97DE-251FC47EFEA3}</Project>
       <Name>SummerOlympiads.Data.Pdf</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SummerOlympiads.Data.SQLite\SummerOlympiads.Data.SQLite.csproj">
+      <Project>{3dea5887-64a5-40d0-a9aa-6881deb74b84}</Project>
+      <Name>SummerOlympiads.Data.SQLite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SummerOlympiads.Logic.ExcelExport\SummerOlympiads.Logic.ExcelExport.csproj">
+      <Project>{d3a089d4-573f-44b1-bc0a-a592847f105c}</Project>
+      <Name>SummerOlympiads.Logic.ExcelExport</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SummerOlympiads.Logic.MySQLImport\SummerOlympiads.Logic.MySQLImport.csproj">
       <Project>{9536cbf5-4401-4927-befb-41354de7c973}</Project>
       <Name>SummerOlympiads.Logic.MySQLImport</Name>
@@ -91,6 +99,10 @@
     <ProjectReference Include="..\SummerOlympiads.Model.MySQL\SummerOlympiads.Model.MySQL.csproj">
       <Project>{05b01f88-76b5-4db2-bf01-833eeee65573}</Project>
       <Name>SummerOlympiads.Model.MySQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SummerOlympiads.Model.SQLite\SummerOlympiads.Model.SQLite.csproj">
+      <Project>{f88d94fe-4ae0-4fdd-964e-4990a4156b80}</Project>
+      <Name>SummerOlympiads.Model.SQLite</Name>
     </ProjectReference>
     <ProjectReference Include="..\SummerOlympiads.Utils\SummerOlympiads.Utils.csproj">
       <Project>{C2173E3B-6674-4AE2-8664-F73C253F5B1E}</Project>
