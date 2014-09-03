@@ -107,8 +107,11 @@
                         }
 
                         var rankAsInteger = int.Parse(record.Rank);
-
-                        var rankInSql = db.Rankings.Where(r => r.Rank == rankAsInteger).FirstOrDefault();
+                        if (record.Rank == 1.ToString())
+                        {
+                            Console.WriteLine(record.Rank);
+                        }
+                        var rankInSql = db.Rankings.Where(r => r.AthleteId == athleteInSql.AthleteId && r.EventId == eventInSql.EventId).FirstOrDefault();
                         if (rankInSql == null)
                         {
                             rankInSql = new Ranking()
