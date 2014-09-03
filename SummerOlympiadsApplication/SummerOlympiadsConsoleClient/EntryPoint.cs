@@ -18,7 +18,7 @@
             //    var sqlImporter = new SqlImporter();
             //    sqlImporter.Import(db);
             //}
-
+            //
             //ZipHandler.CleanUp();
 
             //This part can be used to generate a report for a specific year

@@ -1,0 +1,29 @@
+﻿<Window x:Class="SummerOlympiads.WpfClient.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Menu" Height="350" Width="525" Left="300" Top="200">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="81*"/>
+            <ColumnDefinition Width="211*"/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Import" HorizontalAlignment="Left" Margin="280,108,0,0" VerticalAlignment="Top" Width="63" Click="Import" Grid.Column="1"/>
+        <Image HorizontalAlignment="Left" Height="73" Margin="19,19,0,0" VerticalAlignment="Top" Width="124" Source="Images/OlympicsLogo.png"/>
+        <Button Content="Generate" HorizontalAlignment="Left" Margin="280,133,0,0" VerticalAlignment="Top" Width="63" Click="GenerateReportForYear" Grid.Column="1"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="280,158,0,0" VerticalAlignment="Top" Width="63" Grid.Column="1" Click="UpdateDatabase"/>
+        <TextBox Name="YearBox"  Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="207,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"/>
+        <Label Content="Generate Report for a specific year:" HorizontalAlignment="Left" Margin="10,133,0,0" VerticalAlignment="Top" Width="187" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.217"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="Import from mongoDB and excell to SQL" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top" Width="210" Grid.Column="1"/>
+        <Label Content="Update SQL Server and MongoDB with the xml data" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top" Width="265" Grid.Column="1"/>
+
+    </Grid>
+</Window>

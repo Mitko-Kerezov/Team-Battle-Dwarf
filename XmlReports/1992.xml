@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<olympiad year="1992" city="Barcelona">
+  <event name="100m hurdles">
+    <athlete name="LEIMUVIRTA, Olavi Erkki" rank="1" />
+  </event>
+  <event name="69 - 76kg">
+    <athlete name="OZOLINA, Elvira" rank="2" />
+    <athlete name="NORPOTH, Harald" rank="2" />
+  </event>
+  <event name="67.5 - 75kg, total (middleweight)" />
+  <event name="600m free rifle, team" />
+  <event name="57.15 - 63.5kg (lightweight)" />
+  <event name="5000m">
+    <athlete name="ASARE, Isaac" rank="1" />
+  </event>
+  <event name="+ 87kg (heavyweight)">
+    <athlete name="THOMPSON, William G." rank="2" />
+  </event>
+  <event name="65.77 - 71.67kg (middleweight)" />
+  <event name="double trap (120 targets)" />
+  <event name="au chapelet, 33m" />
+  <event name="69 - 75 kg" />
+  <event name="underwater swimming" />
+  <event name="Olympic Sprint" />
+  <event name="firefly class" />
+  <event name="100m running deer, double shots">
+    <athlete name="HANSEN, Kevin" rank="3" />
+  </event>
+  <event name="individual (FITA Olympic round - 70m)" />
+  <event name="30m sq" />
+  <event name="67.5 - 75kg, one-two hand 3 events (middleweight)" />
+  <event name="48 - 55kg" />
+  <event name="sabre, masters">
+    <athlete name="SLUSARSKI, Tadeusz" rank="3" />
+  </event>
+  <event name="folding K-1 10000m">
+    <athlete name="ROUSER, Jason" rank="1" />
+  </event>
+  <event name="56.7 - 61.24kg (lightweight)">
+    <athlete name="STEINHOEFEL, Ingo" rank="2" />
+  </event>
+  <event name="fixed bird target small birds" />
+  <event name="400m individual medley" />
+  <event name="triple jump" />
+  <event name="open category">
+    <athlete name="DURDYS, Bohumil" rank="3" />
+    <athlete name="LIPARTELIANI, Soso" rank="3" />
+  </event>
+  <event name="68 - 80kg (middleweight)" />
+  <event name="board (lechner)" />
+  <event name="sharpie 12m2">
+    <athlete name="NIKANCHIKOV, Aleksei" rank="2" />
+  </event>
+  <event name="team time trial">
+    <athlete name="EDWARDS, Teresa" rank="3" />
+  </event>
+  <event name="52 - 57kg (bantamweight)">
+    <athlete name="BEDE-SMITH, Frank" rank="2" />
+  </event>
+  <event name="82 - 90kg (light-heavyweight)" />
+  <event name="78 - 87kg (middleweight)">
+    <athlete name="HAN, Myung-Woo" rank="1" />
+    <athlete name="ZBOGAR, Vasilij" rank="2" />
+  </event>
+  <event name="61.23 - 65.77kg (lightweight)" />
+  <event name="5 miles (8.046km)" />
+  <event name="70 - 78kg (welterweight)" />
+  <event name="10000m" />
+  <event name="K-4 500m (kayak four)" />
+  <event name="50km walk" />
+  <event name="60m">
+    <athlete name="CHUNG, Jae-Hun" rank="2" />
+  </event>
+  <event name="olympic class monotype" />
+  <event name="30m army pistol, team">
+    <athlete name="MACK, Timothy" rank="1" />
+  </event>
+  <event name="94kg">
+    <athlete name="STUBER, Werner" rank="3" />
+  </event>
+  <event name="81 - 90kg (middleweight)" />
+  <event name="400m breaststroke">
+    <athlete name="BARAN, Primo" rank="3" />
+  </event>
+  <event name="400, 600, 800m free rifle, team">
+    <athlete name="OLEINIK, Valentin" rank="3" />
+  </event>
+  <event name="57 - 62kg (featherweight)" />
+  <event name="+ 95kg (heavyweight)" />
+  <event name="50.8 - 53.52kg (bantamweight)" />
+  <event name="63 - 70kg (middleweight)">
+    <athlete name="VOLLMER, Herbert Eberhard" rank="1" />
+  </event>
+  <event name="100m breaststroke" />
+  <event name="C-1 1000m (canoe single)" />
+  <event name="67 - 73kg (middleweight)" />
+  <event name="69kg" />
+  <event name="54 - 59kg, total (bantamweight)">
+    <athlete name="RASMUSSEN, Per" rank="2" />
+  </event>
+</olympiad>

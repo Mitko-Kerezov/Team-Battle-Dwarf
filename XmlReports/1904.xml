@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<olympiad year="1904" city="St Louis">
+  <event name="71 - 78kg (half-middleweight)" />
+  <event name="1/2 mile (804.7m)" />
+  <event name="60 - 65kg (half-lightweight)" />
+  <event name="class B up to 60 feet" />
+  <event name="C-1 10000m" />
+  <event name="6m" />
+  <event name="56 - 61kg (half-middleweight)" />
+  <event name="25y small bore rifle, disappearing target" />
+  <event name="200m obstacle event" />
+  <event name="handball">
+    <athlete name="FARBER, Hans-Johann" rank="2" />
+    <athlete name="BENECKE, Emil" rank="2" />
+  </event>
+  <event name="team (FITA Olympic round - 70m)" />
+  <event name="800m freestyle" />
+  <event name="1/3 mile (536.5m)" />
+  <event name="trap (75 targets)" />
+  <event name="25 miles (40.232km)">
+    <athlete name="YUAN, Hua" rank="2" />
+  </event>
+  <event name="75 - 81kg (light-heavyweight)" />
+  <event name="1980 yards Pursuit, Team">
+    <athlete name="DUNAVSKA, Adriana" rank="2" />
+    <athlete name="REID, Graham" rank="3" />
+    <athlete name="KIM, Nam-Soon" rank="3" />
+  </event>
+  <event name="82.5 - 90kg, total (middle-heavyweight)">
+    <athlete name="CATTERALL, Charles" rank="2" />
+    <athlete name="VAN GEENHUIZEN, Miek" rank="2" />
+  </event>
+  <event name="52 - 56kg (lightweight)" />
+  <event name="56kg" />
+  <event name="open class" />
+  <event name="softball">
+    <athlete name="OUDKERK, Jacob" rank="1" />
+  </event>
+  <event name="1500m" />
+  <event name="cesta punta" />
+</olympiad>

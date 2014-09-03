@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<olympiad year="1996" city="Atlanta">
+  <event name="discus throw" />
+  <event name="+ 82.5kg, one-two hand 3 events (heavyweight)" />
+  <event name="shot put, both hands">
+    <athlete name="OKUNO, Fumiko" rank="1" />
+  </event>
+  <event name="100m butterfly" />
+  <event name="open class A" />
+  <event name="+ 80 kg" />
+  <event name="- 48kg">
+    <athlete name="AMANN, Max" rank="2" />
+  </event>
+  <event name="single-handed dinghy (Finn)" />
+  <event name="90 - 100kg (heavyweight)" />
+  <event name="68 - 80 kg">
+    <athlete name="LIU, Xuqing" rank="3" />
+  </event>
+  <event name="500m time trial">
+    <athlete name="FOLLAS, Selina" rank="1" />
+    <athlete name="BRECHT, Jurgen" rank="1" />
+  </event>
+  <event name="cross-country" />
+  <event name="ice hockey" />
+  <event name="48kg (light flywieght)" />
+  <event name="lightweight coxless four (4-)">
+    <athlete name="BATTISTELLI, Stefano" rank="1" />
+  </event>
+  <event name="board (windglider)">
+    <athlete name="KERY, Aniko" rank="3" />
+  </event>
+  <event name="parallel bars">
+    <athlete name="PUTYATIN, Viktor" rank="2" />
+  </event>
+  <event name="50m small bore rifle, standing, individual" />
+  <event name="- 60kg, one-two hand 3 events (featherweight)" />
+  <event name="fleet/match race keelboat open (Soling)" />
+  <event name="team, horizontal bar" />
+  <event name="63 - 72kg">
+    <athlete name="PARKIN, Terence" rank="1" />
+  </event>
+  <event name="+ 110kg, total (super heavyweight)">
+    <athlete name="PROBERT-SCUTT, Michelle" rank="1" />
+  </event>
+  <event name="56 - 60kg, total (featherweight)" />
+  <event name="dragon" />
+  <event name="figure riding team">
+    <athlete name="WAGNER, Klaus" rank="3" />
+  </event>
+  <event name="foil individual">
+    <athlete name="HONEY, Gary" rank="2" />
+  </event>
+  <event name="58 - 62kg (lightweight)">
+    <athlete name="SALVATORI, Ilaria" rank="1" />
+  </event>
+  <event name="club swinging" />
+  <event name="Yngling - Keelboat" />
+  <event name="70 - 76kg, total (middleweight)">
+    <athlete name="COOKE, John Patrick" rank="2" />
+  </event>
+  <event name="60 - 67.5kg, one-two hand 5 events (lightweight)" />
+  <event name="52.62 - 57.15kg (featherweight)">
+    <athlete name="RIISMAN, Mait" rank="1" />
+  </event>
+  <event name="javelin throw, both hands">
+    <athlete name="WASIM, Feroz" rank="3" />
+  </event>
+  <event name="48 - 52kg (flyweight)">
+    <athlete name="SCALONGNE, Dirk" rank="2" />
+    <athlete name="JANG, Mi Ran" rank="2" />
+  </event>
+  <event name="200m freestyle" />
+  <event name="56lb weight throw (25.4kg)" />
+  <event name="97 - 130kg" />
+</olympiad>

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{68718F95-545A-43E2-B81D-F7929F9272A1}</ProjectGuid>
+    <ProjectGuid>{23D7B3E0-2536-480D-BF5B-0BAC08BCA17F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WpfClient</RootNamespace>
-    <AssemblyName>WpfClient</AssemblyName>
+    <RootNamespace>SummerOlympics.WpfClient</RootNamespace>
+    <AssemblyName>SummerOlympics.WpfClient</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -34,18 +34,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
-    <Reference Include="MySql.Data.Entity.EF6, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Windows" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -75,15 +65,8 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Menu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu.xaml.cs">
-      <DependentUpon>Menu.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -101,7 +84,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -110,43 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\BattleDwarf.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SummerOlympiads.Data.Excel\SummerOlympiads.Data.Excel.csproj">
-      <Project>{7ae16421-f2df-41ac-9f82-2033547e1c2c}</Project>
-      <Name>SummerOlympiads.Data.Excel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SummerOlympiads.Data.Mongo\SummerOlympiads.Data.Mongo.csproj">
-      <Project>{07025f4f-9598-4a0e-bf16-418d64a14b63}</Project>
-      <Name>SummerOlympiads.Data.Mongo</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SummerOlympiads.Logic.SqlImporter\SummerOlympiads.Logic.SqlImporter.csproj">
-      <Project>{11fdee04-55bf-4d5c-98a1-6e265e20711b}</Project>
-      <Name>SummerOlympiads.Logic.SqlImporter</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SummerOlympiads.Model.Mongo\SummerOlympiads.Model.Mongo.csproj">
-      <Project>{5229018c-a763-49c6-b873-475d7e5eb693}</Project>
-      <Name>SummerOlympiads.Model.Mongo</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SummerOlympiads.Utils\SummerOlympiads.Utils.csproj">
-      <Project>{c2173e3b-6674-4ae2-8664-f73c253f5b1e}</Project>
-      <Name>SummerOlympiads.Utils</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SummerOlympiads.XmlDataLoader\SummerOlympiads.XmlDataLoader.csproj">
-      <Project>{2b7e59a9-4994-4166-86e3-9a12a82351fe}</Project>
-      <Name>SummerOlympiads.XmlDataLoader</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SummerOlympiads.XMLReport\SummerOlympiads.XmlReport.csproj">
-      <Project>{64350515-758c-4e6b-b9ac-aa5b4f3af0a4}</Project>
-      <Name>SummerOlympiads.XmlReport</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SummerOlympiadsApplication\SummerOlympiads.Model.csproj">
-      <Project>{310b924d-59ca-4f75-bddb-940684e3503d}</Project>
-      <Name>SummerOlympiads.Model</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

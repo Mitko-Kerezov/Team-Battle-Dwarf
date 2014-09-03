@@ -27,7 +27,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.XmlReport",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.XmlDataLoader", "SummerOlympiads.XmlDataLoader\SummerOlympiads.XmlDataLoader.csproj", "{2B7E59A9-4994-4166-86E3-9A12A82351FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfClient", "WpfClient\WpfClient.csproj", "{18AD73BD-DC4A-44C0-AB27-119638AB75E8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.WpfClient", "SummerOlympiads.WpfClient\SummerOlympiads.WpfClient.csproj", "{1B88B33E-7AFD-4887-AEB7-8B1247B42EEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,10 +71,10 @@ Global
 		{2B7E59A9-4994-4166-86E3-9A12A82351FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B7E59A9-4994-4166-86E3-9A12A82351FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B7E59A9-4994-4166-86E3-9A12A82351FE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{18AD73BD-DC4A-44C0-AB27-119638AB75E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{18AD73BD-DC4A-44C0-AB27-119638AB75E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{18AD73BD-DC4A-44C0-AB27-119638AB75E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{18AD73BD-DC4A-44C0-AB27-119638AB75E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B88B33E-7AFD-4887-AEB7-8B1247B42EEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B88B33E-7AFD-4887-AEB7-8B1247B42EEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B88B33E-7AFD-4887-AEB7-8B1247B42EEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B88B33E-7AFD-4887-AEB7-8B1247B42EEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
