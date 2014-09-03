@@ -40,6 +40,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.Data.Pdf", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.Model.Reports", "SymmerOlympiads.Model.Reports\SummerOlympiads.Model.Reports.csproj", "{71B551FE-5A38-4448-8839-B79C5BAAAA8B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SummerOlympiads.JSONExporter", "JSONExporter\SummerOlympiads.JSONExporter.csproj", "{DC60BAFE-527E-4E06-A11B-02417F740F50}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -90,6 +92,10 @@ Global
 		{71B551FE-5A38-4448-8839-B79C5BAAAA8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71B551FE-5A38-4448-8839-B79C5BAAAA8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71B551FE-5A38-4448-8839-B79C5BAAAA8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC60BAFE-527E-4E06-A11B-02417F740F50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC60BAFE-527E-4E06-A11B-02417F740F50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC60BAFE-527E-4E06-A11B-02417F740F50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC60BAFE-527E-4E06-A11B-02417F740F50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,5 +110,6 @@ Global
 		{2B7E59A9-4994-4166-86E3-9A12A82351FE} = {31702FB8-D417-4E08-88C9-51704A4622FE}
 		{1C57DA54-4471-466E-97DE-251FC47EFEA3} = {92B35D1C-7514-4D5A-B13C-9BD53BD0DBF8}
 		{71B551FE-5A38-4448-8839-B79C5BAAAA8B} = {F81FB211-6D8A-4C85-B000-8E7A8FB5D6B1}
+		{DC60BAFE-527E-4E06-A11B-02417F740F50} = {92B35D1C-7514-4D5A-B13C-9BD53BD0DBF8}
 	EndGlobalSection
 EndGlobal
