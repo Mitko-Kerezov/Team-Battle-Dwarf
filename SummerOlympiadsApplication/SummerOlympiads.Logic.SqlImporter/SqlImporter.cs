@@ -20,9 +20,12 @@
 
                 foreach (var record in importer)
                 {
+                    int olympiadYear = int.Parse(record.Year);
+
                     var newEvent = mongoReader.GetEvent(int.Parse(record.EventId));
                     var newAthlete = mongoReader.GetPerson(int.Parse(record.PersonId));
-                    var newCity = mongoReader.GetCity(int.Parse(record.Year));
+                    var newCity = mongoReader.GetCity(olympiadYear);
+
 
                     using (var scope = db.Database.BeginTransaction())
                     {
@@ -34,7 +37,7 @@
                         }
 
                         var olympiadInSql =
-                            db.SummerOlympiads.Where(o => o.City.Name == cityInSql.Name).FirstOrDefault();
+                            db.SummerOlympiads.Where(o => o.Year == olympiadYear).FirstOrDefault();
                         if (olympiadInSql == null)
                         {
                             olympiadInSql = new SummerOlympiad

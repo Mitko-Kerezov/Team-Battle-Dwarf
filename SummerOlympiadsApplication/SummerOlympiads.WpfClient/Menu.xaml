@@ -4,26 +4,24 @@
         Title="Menu" Height="350" Width="525" Left="300" Top="200">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="81*"/>
-            <ColumnDefinition Width="211*"/>
+            <ColumnDefinition Width="138*"/>
+            <ColumnDefinition Width="379*"/>
         </Grid.ColumnDefinitions>
-        <Button Content="Import" HorizontalAlignment="Left" Margin="280,108,0,0" VerticalAlignment="Top" Width="63" Click="Import" Grid.Column="1"/>
-        <Image HorizontalAlignment="Left" Height="73" Margin="19,19,0,0" VerticalAlignment="Top" Width="124" Source="Images/OlympicsLogo.png"/>
-        <Button Content="Generate" HorizontalAlignment="Left" Margin="280,133,0,0" VerticalAlignment="Top" Width="63" Click="GenerateReportForYear" Grid.Column="1"/>
-        <Button Content="Update" HorizontalAlignment="Left" Margin="280,158,0,0" VerticalAlignment="Top" Width="63" Grid.Column="1" Click="UpdateDatabase"/>
-        <TextBox Name="YearBox"  Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="207,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"/>
-        <Label Content="Generate Report for a specific year:" HorizontalAlignment="Left" Margin="10,133,0,0" VerticalAlignment="Top" Width="187" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.217"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
-        <Label Content="Import from mongoDB and excell to SQL" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top" Width="210" Grid.Column="1"/>
-        <Label Content="Update SQL Server and MongoDB with the xml data" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top" Width="265" Grid.Column="1"/>
+        <Button Content="Import" HorizontalAlignment="Left" Margin="280,102,0,0" VerticalAlignment="Top" Width="63" Click="Import" Grid.Column="1" Height="20"/>
+        <Image HorizontalAlignment="Left" Height="73" Margin="19,19,0,0" VerticalAlignment="Top" Width="124" Source="Images/OlympicsLogo.png" Grid.ColumnSpan="2"/>
+        <Button Content="Generate" HorizontalAlignment="Left" Margin="280,153,0,0" VerticalAlignment="Top" Width="63" Click="GenerateReportForYear" Grid.Column="1" Height="20"/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="280,204,0,0" VerticalAlignment="Top" Width="63" Grid.Column="1" Click="UpdateDatabase" Height="20"/>
+        <TextBox Name="YearBox"  Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="207,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"/>
+        <TextBox Name="NationalityBox"  Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="207,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"/>
+        <Label Content="Import from mongoDB and excell to SQL" HorizontalAlignment="Left" Margin="0,102,0,0" VerticalAlignment="Top" Width="238" Grid.Column="1" Height="23"/>
+        <Label Content="Update SQL Server and MongoDB with the xml data" HorizontalAlignment="Left" Margin="0,204,0,0" VerticalAlignment="Top" Width="275" Grid.Column="1" Height="23"/>
+        <Label Content="Generate PDF summarizing reports" Grid.Column="1" HorizontalAlignment="Left" Margin="0,128,0,0" VerticalAlignment="Top" Width="200"/>
+        <Button Content="Generate" Grid.Column="1" HorizontalAlignment="Left" Margin="280,128,0,0" VerticalAlignment="Top" Width="63" Click="GeneratePdfReports"/>
+        <Label Content="Generate JSON reports" Grid.Column="1" HorizontalAlignment="Left" Margin="0,179,0,0" VerticalAlignment="Top" Width="270"/>
+        <Button Content="Generate" Grid.Column="1" HorizontalAlignment="Left" Margin="280,179,0,0" VerticalAlignment="Top" Width="63" Click="GenerateJSONReports"/>
+        <Label Content="Generate Report for a specific year:" Grid.Column="1" HorizontalAlignment="Left" Margin="0,153,0,0" VerticalAlignment="Top" Width="202"/>
+        <Label Content="Generate Excel " Grid.Column="1" HorizontalAlignment="Left" Margin="0,229,0,0" VerticalAlignment="Top" Width="270"/>
+        <Button Content="Generate" Grid.Column="1" HorizontalAlignment="Left" Margin="280,229,0,0" VerticalAlignment="Top" Width="63" Click="ExportToExcel"/>
 
     </Grid>
 </Window>

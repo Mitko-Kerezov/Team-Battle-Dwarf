@@ -1,5 +1,6 @@
 ﻿namespace SummerOlympiads.Data.Pdf
 {
+    using System;
     using System.Linq;
 
     using SummerOlympiads.Model;
@@ -14,30 +15,33 @@
             this.db = olympiadsEntities;
         }
 
-        public void Generate()
+        public void Generate(string nationalityAbbr)
         {
-            foreach (var nationality in this.db.Nationalities)
+            var nationality = this.db.Nationalities.Where(n => n.Name == nationalityAbbr).FirstOrDefault();
+            if(nationality == null)
             {
-                var exporter = new PdfExporter();
-                var nationalityName = nationality.Name;
-                var report = new CountryReport
-                                 {
-                                     Athletes =
-                                         this.db.Rankings.Where(
-                                             r => r.Athlete.Nationality.Name == nationalityName)
-                                         .GroupBy(a => a.Athlete.FullName)
-                                         .Select(
-                                             a =>
-                                             new CountryReportRow
-                                                 {
-                                                     Name = a.Key, 
-                                                     NumberMedals = a.Count()
-                                                 })
-                                         .OrderByDescending(a => a.NumberMedals)
-                                 };
-
-                exporter.ExportToFile(nationalityName, report);
+                throw new ArgumentException("There is no such nationality in database!");
             }
+
+            var exporter = new PdfExporter();
+            var nationalityName = nationality.Name;
+            var report = new CountryReport
+                                {
+                                    Athletes =
+                                        this.db.Rankings.Where(
+                                            r => r.Athlete.Nationality.Name == nationalityName)
+                                        .GroupBy(a => a.Athlete.FullName)
+                                        .Select(
+                                            a =>
+                                            new CountryReportRow
+                                                {
+                                                    Name = a.Key, 
+                                                    NumberMedals = a.Count()
+                                                })
+                                        .OrderByDescending(a => a.NumberMedals)
+                                };
+
+            exporter.ExportToFile(nationalityName, report);
         }
     }
 }

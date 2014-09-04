@@ -55,7 +55,10 @@
 
         public static void CleanUp()
         {
-            Directory.Delete(Path.GetTempPath() + ZipSettings.Default.TempFolder, true);
+            if (Directory.Exists(Path.GetTempPath() + ZipSettings.Default.TempFolder))
+            {
+                Directory.Delete(Path.GetTempPath() + ZipSettings.Default.TempFolder, true);
+            }
         }
     }
 }

@@ -17,24 +17,17 @@
         public void ExportToExcel(IGoldMedalistsUnitOfWork mysqlDb, GoldMedalistAgesContext sqlLiteDb)
         {
             var athletes = new List<YoungestGoldMedalist>();
-            
-            using ((IDisposable)mysqlDb)
+            foreach (var athleteAge in sqlLiteDb.GoldMedalistAges)
             {
-                using(sqlLiteDb)
+                var eventName = mysqlDb.Goldmedalists.Where(g => g.Name == athleteAge.Name).Select(g => g.Event).First();
+                var youngMedalist = new YoungestGoldMedalist()
                 {
-                    foreach (var athleteAge in sqlLiteDb.GoldMedalistAges)
-                    {
-                        var eventName = mysqlDb.Goldmedalists.Where(g => g.Name == athleteAge.Name).Select(g => g.Event).First();
-                        var youngMedalist = new YoungestGoldMedalist()
-                        {
-                            Age = athleteAge.Age,
-                            Event = eventName,
-                            Name = athleteAge.Name
-                        };
+                    Age = athleteAge.Age,
+                    Event = eventName,
+                    Name = athleteAge.Name
+                };
 
-                        athletes.Add(youngMedalist);
-                    }
-                }
+                athletes.Add(youngMedalist);
             }
 
             var groupedByEvents = athletes.GroupBy(a => a.Event);
@@ -51,7 +44,7 @@
             }
 
             CreateExcel(youngestMedalists);
-            
+
         }
 
         private void CreateExcel(IList<YoungestGoldMedalist> youngestMedalists)

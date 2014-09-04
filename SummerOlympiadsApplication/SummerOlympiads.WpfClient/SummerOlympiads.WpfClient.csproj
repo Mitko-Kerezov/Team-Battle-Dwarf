@@ -54,6 +54,8 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="Telerik.OpenAccess, Version=2013.3.1320.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.OpenAccess.35.Extensions, Version=2013.3.1320.1, Culture=neutral, PublicKeyToken=7ce17eeaf1d59342, processorArchitecture=MSIL" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -112,6 +114,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\JSONExporter\SummerOlympiads.JSONExporter.csproj">
+      <Project>{dc60bafe-527e-4e06-a11b-02417f740f50}</Project>
+      <Name>SummerOlympiads.JSONExporter</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SummerOlympiads.Data.Excel\SummerOlympiads.Data.Excel.csproj">
       <Project>{7ae16421-f2df-41ac-9f82-2033547e1c2c}</Project>
       <Name>SummerOlympiads.Data.Excel</Name>
@@ -120,13 +126,45 @@
       <Project>{07025f4f-9598-4a0e-bf16-418d64a14b63}</Project>
       <Name>SummerOlympiads.Data.Mongo</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SummerOlympiads.Data.Pdf\SummerOlympiads.Data.Pdf.csproj">
+      <Project>{1c57da54-4471-466e-97de-251fc47efea3}</Project>
+      <Name>SummerOlympiads.Data.Pdf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SummerOlympiads.Data.SQLite\SummerOlympiads.Data.SQLite.csproj">
+      <Project>{3dea5887-64a5-40d0-a9aa-6881deb74b84}</Project>
+      <Name>SummerOlympiads.Data.SQLite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SummerOlympiads.JSON.JSONImporter\SummerOlympiads.JSON.JSONImporter.csproj">
+      <Project>{c4bf386d-8dc0-4dcd-aab0-52dda77d0e89}</Project>
+      <Name>SummerOlympiads.JSON.JSONImporter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SummerOlympiads.Logic.ExcelExport\SummerOlympiads.Logic.ExcelExport.csproj">
+      <Project>{d3a089d4-573f-44b1-bc0a-a592847f105c}</Project>
+      <Name>SummerOlympiads.Logic.ExcelExport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SummerOlympiads.Logic.MySQLImport\SummerOlympiads.Logic.MySQLImport.csproj">
+      <Project>{9536cbf5-4401-4927-befb-41354de7c973}</Project>
+      <Name>SummerOlympiads.Logic.MySQLImport</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SummerOlympiads.Logic.SqlImporter\SummerOlympiads.Logic.SqlImporter.csproj">
       <Project>{11fdee04-55bf-4d5c-98a1-6e265e20711b}</Project>
       <Name>SummerOlympiads.Logic.SqlImporter</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SummerOlympiads.Model.Excel\SummerOlympiads.Model.Excel.csproj">
+      <Project>{69cdf10e-6b3e-4364-bda5-9d36b86fb1a9}</Project>
+      <Name>SummerOlympiads.Model.Excel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SummerOlympiads.Model.Mongo\SummerOlympiads.Model.Mongo.csproj">
       <Project>{5229018c-a763-49c6-b873-475d7e5eb693}</Project>
       <Name>SummerOlympiads.Model.Mongo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SummerOlympiads.Model.MySQL\SummerOlympiads.Model.MySQL.csproj">
+      <Project>{05b01f88-76b5-4db2-bf01-833eeee65573}</Project>
+      <Name>SummerOlympiads.Model.MySQL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SummerOlympiads.Model.SQLite\SummerOlympiads.Model.SQLite.csproj">
+      <Project>{f88d94fe-4ae0-4fdd-964e-4990a4156b80}</Project>
+      <Name>SummerOlympiads.Model.SQLite</Name>
     </ProjectReference>
     <ProjectReference Include="..\SummerOlympiads.Utils\SummerOlympiads.Utils.csproj">
       <Project>{c2173e3b-6674-4ae2-8664-f73c253f5b1e}</Project>
@@ -143,6 +181,14 @@
     <ProjectReference Include="..\SummerOlympiadsApplication\SummerOlympiads.Model.csproj">
       <Project>{310b924d-59ca-4f75-bddb-940684e3503d}</Project>
       <Name>SummerOlympiads.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SummerOlympiadsConsoleClient\SummerOlympiads.ConsoleClient.csproj">
+      <Project>{e38584dd-29a8-486a-8133-9f9f7f4c72d0}</Project>
+      <Name>SummerOlympiads.ConsoleClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SymmerOlympiads.Model.Reports\SummerOlympiads.Model.Reports.csproj">
+      <Project>{71b551fe-5a38-4448-8839-b79c5baaaa8b}</Project>
+      <Name>SummerOlympiads.Model.Reports</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
